@@ -42,9 +42,9 @@ const vocabulary = [
     { chinese: "口", mean: "Cái miệng", pronunciation: "Câu ồ", pinyin: "Kǒu" },
     { chinese: "白", mean: "Màu trắng", pronunciation: "Bái", pinyin: "Bái" },
     { chinese: "不", mean: "Không", pronunciation: "Bu", pinyin: "Bù" },
-    { chinese: "马 ", mean: "Con ngựa", pronunciation: "Mạ", pinyin: "Mǎ" },
+    { chinese: "马", mean: "Con ngựa", pronunciation: "Mạ", pinyin: "Mǎ" },
     { chinese: "女", mean: "Nữ giới", pronunciation: "Nủy", pinyin: "Nǚ" },
-    { chinese: "你 ", mean: "Bạn/cậu/mày", pronunciation: "Nỉ", pinyin: "Nǐ" },
+    { chinese: "你", mean: "Bạn/cậu/mày", pronunciation: "Nỉ", pinyin: "Nǐ" },
     { chinese: "男", mean: "Nam giới", pronunciation: "Nán", pinyin: "Nán" },
 
 ];
