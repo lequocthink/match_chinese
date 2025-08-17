@@ -199,3 +199,38 @@ wordsPerRoundSel.addEventListener("change", buildOrderAndReset);
  * 6) KHỞI ĐỘNG
  *******************************/
 buildOrderAndReset();
+
+
+// Lấy phần tử
+const modal = document.getElementById("vocabModal");
+const btn = document.getElementById("showVocabularyBtn");
+const span = document.querySelector(".close");
+const vocabTableBody = document.getElementById("vocabTableBody");
+
+// Khi click nút -> mở popup và render bảng
+btn.onclick = function() {
+  vocabTableBody.innerHTML = ""; // clear bảng cũ
+  vocabulary.forEach((word, index) => {
+    const row = `<tr>
+      <td>${index + 1}</td>
+      <td>${word.chinese}</td>
+      <td>${word.mean}</td>
+      <td>${word.pronunciation}</td>
+      <td>${word.pinyin}</td>
+    </tr>`;
+    vocabTableBody.innerHTML += row;
+  });
+  modal.style.display = "block";
+}
+
+// Khi click nút đóng -> tắt popup
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Khi click ra ngoài popup -> cũng tắt
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
