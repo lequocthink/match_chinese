@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Game Ghép Từ Vựng Tiếng Trung</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Game Ghép Từ Vựng</h1>
+        <div class="controls">
+            <label for="wordsPerRound">Số từ mỗi vòng:</label>
+            <select id="wordsPerRound" class="select_option">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+            <button id="restartBtn" class="button-8">Restart</button>
+            <button id="nextBtn" disabled class="button-85">Next Round ▶</button>
+        </div>
+    </header>
+
+    <section class="stats">
+        <div>Điểm: <strong id="score">0</strong></div>
+        <div>Sai: <strong id="mistakes">0</strong></div>
+        <div>Tiến độ: <strong id="progress">Vòng 0/0</strong></div>
+    </section>
+
+    <section class="game-container">
+        <div class="column">
+            <h2>Chinese</h2>
+            <ul id="chineseList"></ul>
+        </div>
+        <div class="column">
+            <h2>Nghĩa</h2>
+            <ul id="meanList"></ul>
+        </div>
+    </section>
+
+    <p class="notice" id="notice"></p>
+
+    <script src="vocabulary.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
