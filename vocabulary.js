@@ -59,7 +59,7 @@ const vocabulary = [
     { chinese: "姐姐", mean: "Chị gái", pronunciation: "Chìa chia", pinyin: "Jiějiě" },
     { chinese: "妹妹", mean: "Em gái", pronunciation: "Mây mầy", pinyin: "Mèimei" },
     { chinese: "他", mean: "Anh ấy, ông ấy, chú ấy", pronunciation: "Ta", pinyin: "Tā" },
-    { chinese: "她 ", mean: "Chị ấy, bà ấy, cô ấy", pronunciation: "Ta", pinyin: "Tā" },
+    { chinese: "她", mean: "Chị ấy, bà ấy, cô ấy", pronunciation: "Ta", pinyin: "Tā" },
     { chinese: "的", mean: "Của", pronunciation: "Đơ", pinyin: "de" },
 
 ];
