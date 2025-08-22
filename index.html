@@ -35,7 +35,10 @@
         <h1>Game Ghép Từ Vựng</h1>
         
         <!-- Nút mở bảng từ vựng -->
-        <button id="showVocabularyBtn">Xem toàn bộ từ vựng FNG</button>
+        <button id="showVocabularyBtn" class="button-54" style="margin-right: 10px;">Xem toàn bộ từ vựng</button>
+        <button id="showVocabularyGame" class="button-54" style="margin-right: 10px;">Ôn từ vựng</button>
+        <button id="showPronunciationGame" class="button-54" style="margin-right: 10px;">Ôn phát âm</button>
+  
 
         <!-- Popup -->
         <div id="vocabModal" class="modal">
@@ -57,36 +60,74 @@
             </div>
         </div>
         
+    </header>
+    
+    <div id="isVocabularyGame">
         <div class="controls" style="margin-bottom: 10px;">
-            <label for="wordsPerRound">Số từ mỗi vòng:</label>
-            <select id="wordsPerRound" class="select_option">
+            <label for="wordsPerRoundV">Số từ mỗi vòng:</label>
+            <select id="wordsPerRoundV" class="select_option">
                 <option value="5" selected>5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
             </select>
-            <button id="restartBtn" class="button-8">Restart</button>
-            <button id="nextBtn" disabled class="button-85">Next Round ▶</button>
+            <button id="restartBtnV" class="button-8">Restart</button>
+            <button id="nextBtnV" disabled class="button-85">Next Round ▶</button>
         </div>
-    </header>
 
-    <section class="stats">
-        <div>Điểm: <strong id="score">0</strong></div>
-        <div>Sai: <strong id="mistakes">0</strong></div>
-        <div>Tiến độ: <strong id="progress">Vòng 0/0</strong></div>
-    </section>
+        <section class="stats">
+            <div>Điểm: <strong id="scoreV">0</strong></div>
+            <div>Sai: <strong id="mistakesV">0</strong></div>
+            <div>Tiến độ: <strong id="progressV">Vòng 0/0</strong></div>
+        </section>
+    
+        <section class="game-container">
+            <div class="column">
+                <h2>Chinese</h2>
+                <ul id="chineseListV"></ul>
+            </div>
+            <div class="column">
+                <h2>Nghĩa</h2>
+                <ul id="meanListV"></ul>
+            </div>
+        </section>
+    
+        <p class="notice" id="noticeV"></p>
+    </div>
 
-    <section class="game-container">
-        <div class="column">
-            <h2>Chinese</h2>
-            <ul id="chineseList"></ul>
+    <div id="isPronunciationGame">
+        <div class="controls" style="margin-bottom: 10px;">
+            <label for="wordsPerRoundP">Số từ mỗi vòng:</label>
+            <select id="wordsPerRoundP" class="select_option">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+            <button id="restartBtnP" class="button-8">Restart</button>
+            <button id="nextBtnP" disabled class="button-85">Next Round ▶</button>
         </div>
-        <div class="column">
-            <h2>Nghĩa</h2>
-            <ul id="meanList"></ul>
-        </div>
-    </section>
 
-    <p class="notice" id="notice"></p>
+        <section class="stats">
+            <div>Điểm: <strong id="scoreP">0</strong></div>
+            <div>Sai: <strong id="mistakesP">0</strong></div>
+            <div>Tiến độ: <strong id="progressP">Vòng 0/0</strong></div>
+        </section>
+    
+        <section class="game-container">
+            <div class="column">
+                <h2>Chinese</h2>
+                <ul id="chineseListP"></ul>
+            </div>
+            <div class="column">
+                <h2>Cách phát âm</h2>
+                <ul id="pronunciationList"></ul>
+            </div>
+        </section>
+    
+        <p class="notice" id="noticeP"></p>
+    </div>
+
+
+
 
     <script src="vocabulary.js"></script>
     <script src="script.js"></script>
