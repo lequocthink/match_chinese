@@ -193,7 +193,7 @@ li.wrong {
 
 
 
-.radical {
+.radical, .word {
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -204,19 +204,20 @@ li.wrong {
   /* opacity: 10%; */
 }
 
-.radical_content {
+.radical_content, .word_content {
   position: relative;
   width: 80%;
   margin: auto;
   background-color: white;
   padding: 15px;
   margin-top: 40px;
-  height: 800px;
+  /* height: 800px; */
+  max-height: 80vh;
   /* overflow-y: scroll; */
   overflow: auto;
 }
 
-#closeRadicalBtn {
+#closeRadicalBtn, #closeWordBtn {
   position: sticky;
   right: 10px;
   top: 10px;

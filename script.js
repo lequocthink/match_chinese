@@ -467,14 +467,44 @@ window.onclick = function(event) {
 }
 
 
+const word = document.getElementById("word");
+const showWordBtn = document.getElementById("showWordBtn");
+const closeWordBtn = document.getElementById("closeWordBtn");
+
+showWordBtn.onclick = function() {
+  word.style.display = "block";
+}
+
+closeWordBtn.onclick = function() {
+  word.style.display = "none";
+}
+
+
 const radical = document.getElementById("radical");
 const showRadicalBtn = document.getElementById("showRadicalBtn");
 const closeRadicalBtn = document.getElementById("closeRadicalBtn");
+const radicalTableBody = document.getElementById("radicalTableBody");
+
 
 showRadicalBtn.onclick = function() {
+  radicalTableBody.innerHTML = ""; // clear bảng cũ
+  radicalList.forEach((word, index) => {
+    const row = `<tr>
+      <td>${index + 1}</td>
+      <td>${word.chinese}</td>
+      <td>${word.mean}</td>
+      <td>${word.sino_vietnamese}</td>
+      <td>${word.pinyin}</td>
+      <td>${word.pronunciation}</td>
+    </tr>`;
+    radicalTableBody.innerHTML += row;
+  });
   radical.style.display = "block";
 }
 
 closeRadicalBtn.onclick = function() {
   radical.style.display = "none";
 }
+
+
+
