@@ -227,6 +227,39 @@ li.wrong {
   border-radius: 20px;
 }
 
+/* feature copy */
+.copy_word {
+  cursor: pointer;
+}
+.copy_word:hover {
+  background-color: #f0f0f0;
+}
+
+
+.toast {
+  visibility: hidden;
+  min-width: 200px;
+  margin-left: -100px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+
 
 /* custom */
 

@@ -1,3 +1,24 @@
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.className = "toast show";
+
+  setTimeout(() => {
+    toast.className = "toast";
+  }, 2000); // 3 giây rồi biến mất
+}
+
+// feature copy
+function onCopyCell(e) {
+  if (!e.target.classList.contains('copy_word')) return;
+  const text = e.target.innerText.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    showToast(`Đã copy: ${text}`);
+  }).catch(console.error);
+}
+
+
+
 
 function vocabularyGame() {
 
@@ -438,13 +459,15 @@ const btn = document.getElementById("showVocabularyBtn");
 const span = document.querySelector(".close");
 const vocabTableBody = document.getElementById("vocabTableBody");
 
+vocabTableBody.addEventListener('click', onCopyCell);
+
 // Khi click nút -> mở popup và render bảng
 btn.onclick = function() {
   vocabTableBody.innerHTML = ""; // clear bảng cũ
   vocabulary.forEach((word, index) => {
     const row = `<tr>
       <td>${index + 1}</td>
-      <td>${word.chinese}</td>
+      <td class="copy_word">${word.chinese}</td>
       <td>${word.mean}</td>
       <td>${word.pronunciation}</td>
       <td>${word.pinyin}</td>
@@ -485,13 +508,15 @@ const showRadicalBtn = document.getElementById("showRadicalBtn");
 const closeRadicalBtn = document.getElementById("closeRadicalBtn");
 const radicalTableBody = document.getElementById("radicalTableBody");
 
+// giả sử phần này chạy ngay sau khi DOM sẵn sàng:
+radicalTableBody.addEventListener('click', onCopyCell);
 
 showRadicalBtn.onclick = function() {
   radicalTableBody.innerHTML = ""; // clear bảng cũ
   radicalList.forEach((word, index) => {
     const row = `<tr>
       <td>${index + 1}</td>
-      <td>${word.chinese}</td>
+      <td class="copy_word">${word.chinese}</td>
       <td>${word.mean}</td>
       <td>${word.sino_vietnamese}</td>
       <td>${word.pinyin}</td>
@@ -505,6 +530,9 @@ showRadicalBtn.onclick = function() {
 closeRadicalBtn.onclick = function() {
   radical.style.display = "none";
 }
+
+
+
 
 
 
