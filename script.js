@@ -415,7 +415,6 @@ const showPronunciationGame = document.getElementById("showPronunciationGame");
 const isPronunciationGame = document.getElementById("isPronunciationGame");
 
 showVocabularyGame.onclick = function() {
-  console.log("Check data");
   isVocabularyGame.style.display = "block";
   isPronunciationGame.style.display = "none";
   vocabularyGame();
@@ -465,4 +464,17 @@ window.onclick = function(event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
+}
+
+
+const radical = document.getElementById("radical");
+const showRadicalBtn = document.getElementById("showRadicalBtn");
+const closeRadicalBtn = document.getElementById("closeRadicalBtn");
+
+showRadicalBtn.onclick = function() {
+  radical.style.display = "block";
+}
+
+closeRadicalBtn.onclick = function() {
+  radical.style.display = "none";
 }

@@ -192,6 +192,41 @@ li.wrong {
 }
 
 
+
+.radical {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(230, 229, 229, 0.9);
+  top: 0;
+  height: 100%;
+  display: none;
+  /* opacity: 10%; */
+}
+
+.radical_content {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  padding: 15px;
+  margin-top: 40px;
+  height: 800px;
+  /* overflow-y: scroll; */
+  overflow: auto;
+}
+
+#closeRadicalBtn {
+  position: sticky;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+
 /* custom */
 
 .select_option {
