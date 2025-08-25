@@ -91,5 +91,14 @@ const vocabulary = [
     { chinese: "禾 ()", mean: "lúa (hòa)", pronunciation: "Khửa ()", pinyin: "hé" },
     { chinese: "竹 ()", mean: "tre (trúc)", pronunciation: "chú ()", pinyin: "zhú" },
     { chinese: "米 ()", mean: "gạo (mễ)", pronunciation: "mỉ ()", pinyin: "mǐ" },
-
+    { chinese: "糸 (纟)", mean: "tơ (mịch)", pronunciation: "mì", pinyin: "mì" },
+    { chinese: "肉 (月)", mean: "thịt (nhục)", pronunciation: "rou -> rẩu", pinyin: "ròu" },
+    { chinese: "艸 (艹)", mean: "cỏ (thảo)", pronunciation: "thảo", pinyin: "cǎo" },
+    { chinese: "虫 ()", mean: "côn trùng (trùng)", pronunciation: "chủng", pinyin: "chóng" },
+    { chinese: "衣 (衤)", mean: "áo (y)", pronunciation: "i", pinyin: "yī" },
+    { chinese: "言 ()", mean: "lời nói (ngôn)", pronunciation: "dẻn", pinyin: "yán" },
+    { chinese: "貝 ()", mean: "vỏ sò (bối)", pronunciation: "bây", pinyin: "bèi" },
+    { chinese: "足 ()", mean: "chân (túc)", pronunciation: "chú", pinyin: "zú" },
+    { chinese: "車 ()", mean: "xe (xa)", pronunciation: "trưa", pinyin: "chē" },
+    { chinese: "辶 ()", mean: "bước (sước)", pronunciation: "chua", pinyin: "chuò" },
 ];
