@@ -124,7 +124,7 @@ const vocabulary = [
     { chinese: "廴 ()", mean: "bước dài, dẫn đi (dẫn)", pronunciation: "dỉn (dẫn)", pinyin: "yǐn" },
     { chinese: "弓 ()", mean: "cây cung (cung)", pronunciation: "cung (cung)", pinyin: "gōng" },
     { chinese: "彡 ()", mean: "lông dài, tóc (sam)", pronunciation: "san (sam)", pinyin: "shān" },
-    { chinese: "戈 ()", mean: "cây giáo, cây thương (sam)", pronunciation: "cưa (sam)", pinyin: "gē" },
+    { chinese: "戈 ()", mean: "cây giáo, cây thương (qua)", pronunciation: "cưa (qua)", pinyin: "gē" },
     { chinese: "月 ()", mean: "mặt trăng (nguyệt)", pronunciation: "duya (nguyệt)", pinyin: "yuè" },
     { chinese: "示 (礻)", mean: "chỉ thị, thần linh (liên quan đến cúng bái, tôn giáo) (thị)", pronunciation: "sì (thị)", pinyin: "shì" },
 ];
