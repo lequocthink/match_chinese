@@ -434,7 +434,7 @@ function pinyinGame() {
    *******************************/
   const chineseListPinyin = document.getElementById("chineseListPinyin");
   const pinyinList = document.getElementById("pinyinList");
-  const scoreElpinyin = document.getElementById("scorePinyin");
+  const scoreElPinyin = document.getElementById("scorePinyin");
   const mistakesElPinyin = document.getElementById("mistakesPinyin");
   const progressElPinyin = document.getElementById("progressPinyin");
   const noticeElPinyin = document.getElementById("noticePinyin");
