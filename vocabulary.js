@@ -117,7 +117,7 @@ const vocabulary = [
     { chinese: "夕 ()", mean: "buổi tối (tịch)", pronunciation: "xi (tịch)", pinyin: "xī" },
     { chinese: "子 ()", mean: "con trai (tử)", pronunciation: "dư (tử)", pinyin: "zǐ" },
     { chinese: "小 ()", mean: "nhỏ, bé (tiểu)", pronunciation: "xiểu (tiểu)", pinyin: "xiǎo" },
-    { chinese: "尸 ()", mean: "xác chết, thể xác ()", pronunciation: "si ()", pinyin: "shī" },
+    { chinese: "尸 ()", mean: "xác chết, thể xác (thi)", pronunciation: "si (thi)", pinyin: "shī" },
     { chinese: "工 ()", mean: "công việc, thợ, thủ công (công)", pronunciation: "cung (công)", pinyin: "gōng" },
     { chinese: "干 ()", mean: "cái khiên, che, Khô, can dự (can)", pronunciation: "cang (can)", pinyin: "gān" },
     { chinese: "幺 ()", mean: "út, bé nhỏ, thứ yếu (yêu)", pronunciation: "dao (yêu)", pinyin: "yāo" },
