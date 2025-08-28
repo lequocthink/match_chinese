@@ -151,6 +151,10 @@ li.wrong {
   display: none;
 }
 
+#isPinyinGame {
+  display: none;
+}
+
 /* table */
 
 /* Popup (ẩn mặc định) */

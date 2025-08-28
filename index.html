@@ -58,7 +58,7 @@
         <div>
             <button id="showVocabularyGame" class="button-54" style="margin-right: 10px;">Ôn từ vựng</button>
             <button id="showPronunciationGame" class="button-54" style="margin-right: 10px;">Ôn phát âm</button>
-            <button id="showPinyinnGame" class="button-54" style="margin-right: 10px;">Ôn pinyin</button>
+            <button id="showPinyinGame" class="button-54" style="margin-right: 10px;">Ôn pinyin</button>
         </div>
 
 
@@ -989,6 +989,37 @@
         <p class="notice" id="noticeP"></p>
     </div>
 
+    <div id="isPinyinGame">
+        <div class="controls" style="margin-bottom: 10px;">
+            <label for="wordsPerRoundPinyin">Số từ mỗi vòng:</label>
+            <select id="wordsPerRoundPinyin" class="select_option">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+            <button id="restartBtnPinyin" class="button-8">Restart</button>
+            <button id="nextBtnPinyin" disabled class="button-85">Next Round ▶</button>
+        </div>
+
+        <section class="stats">
+            <div>Điểm: <strong id="scorePinyin">0</strong></div>
+            <div>Sai: <strong id="mistakesPinyin">0</strong></div>
+            <div>Tiến độ: <strong id="progressPinyin">Vòng 0/0</strong></div>
+        </section>
+
+        <section class="game-container">
+            <div class="column">
+                <h2>Chinese</h2>
+                <ul id="chineseListPinyin"></ul>
+            </div>
+            <div class="column">
+                <h2>Pinyin</h2>
+                <ul id="pinyinList"></ul>
+            </div>
+        </section>
+
+        <p class="notice" id="noticePinyin"></p>
+    </div>
 
 
 
