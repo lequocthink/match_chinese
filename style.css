@@ -584,3 +584,51 @@ header {
   }
 }
 
+/* tablet */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .app {
+    width: 90%;
+  }
+
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+
+  .loading-text {
+    font-size: 20px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .left_main {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .right_main {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .right_main_button {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+  }
+
+
+  .game-container {
+    gap: 10px;
+  }
+
+  #wordsPerRoundV, #wordsPerRoundP, #wordsPerRoundPinyin {
+    width: 70px;
+  }
+}
+
