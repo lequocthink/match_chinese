@@ -933,7 +933,7 @@
                     <button id="showVocabularyGame" class="button-54" style="margin-right: 10px;">Ôn từ vựng</button>
                     <button id="showPronunciationGame" class="button-54" style="margin-right: 10px;">Ôn phát âm</button>
                     <button id="showPinyinGame" class="button-54" style="margin-right: 10px;">Ôn pinyin</button>
-                    <button id="showPinyinGame" class="button-54" style="margin-right: 10px;">Ôn giao tiếp</button>
+                    <button id="showSentenceGame" class="button-54" style="margin-right: 10px;">Ôn giao tiếp</button>
                 </div>
         
                 <div id="isVocabularyGame">
@@ -1031,6 +1031,38 @@
             
                     <p class="notice" id="noticePinyin"></p>
                 </div>
+
+                <div id="isSentenceGame">
+                    <div class="controls" style="margin-bottom: 10px;">
+                        <label for="wordsPerRoundSentence">Số từ mỗi vòng:</label>
+                        <select id="wordsPerRoundSentence" class="select_option">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                        </select>
+                        <button id="restartBtnSentence" class="button-8">Restart</button>
+                        <button id="nextBtnSentence" disabled class="button-85">Next Round ▶</button>
+                    </div>
+            
+                    <section class="stats">
+                        <div>Điểm: <strong id="scoreSentence">0</strong></div>
+                        <div>Sai: <strong id="mistakesSentence">0</strong></div>
+                        <div>Tiến độ: <strong id="progressSentence">Vòng 0/0</strong></div>
+                    </section>
+            
+                    <section class="game-container">
+                        <div class="column">
+                            <h2>Chinese</h2>
+                            <ul id="chineseListSentence"></ul>
+                        </div>
+                        <div class="column">
+                            <h2>Câu</h2>
+                            <ul id="sentenceList"></ul>
+                        </div>
+                    </section>
+            
+                    <p class="notice" id="noticeSentence"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -1041,6 +1073,7 @@
 
     <script src="vocabulary.js"></script>
     <script src="radical.js"></script>
+    <script src="sentence.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -155,6 +155,11 @@ li.wrong {
   display: none;
 }
 
+#isSentenceGame {
+  display: none;
+}
+
+
 /* table */
 
 /* Popup (ẩn mặc định) */

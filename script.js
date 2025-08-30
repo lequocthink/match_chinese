@@ -630,6 +630,209 @@ function pinyinGame() {
   buildOrderAndReset();
 }
 
+function sentenceGame() {
+
+  /*******************************
+   * 2) BIẾN TRẠNG THÁI
+   *******************************/
+  const chineseListSentence = document.getElementById("chineseListSentence");
+  const sentenceList = document.getElementById("sentenceList");
+  const scoreElSentence = document.getElementById("scoreSentence");
+  const mistakesElSentence = document.getElementById("mistakesSentence");
+  const progressElSentence = document.getElementById("progressSentence");
+  const noticeElSentence = document.getElementById("noticeSentence");
+  const wordsPerRoundSelSentence = document.getElementById("wordsPerRoundSentence");
+  const restartBtnSentence = document.getElementById("restartBtnSentence");
+  const nextBtnSentence = document.getElementById("nextBtnSentence");
+
+  let score = 0;
+  let mistakes = 0;
+  let order = [];   // mảng index đã xáo trộn toàn bộ
+  let cursor = 0;   // con trỏ đang ở vị trí nào trong order
+  let currentSlice = []; // index các từ của vòng hiện tại
+  let matchesLeft = 0;
+
+  let selectedChinese = null; // li
+  let selectedMean = null;    // li
+
+  /*******************************
+   * 3) HÀM TIỆN ÍCH
+   *******************************/
+  function shuffle(arr) {
+    // Fisher-Yates
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = (Math.random() * (i + 1)) | 0;
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function updateStats() {
+    scoreElSentence.textContent = String(score);
+    mistakesElSentence.textContent = String(mistakes);
+
+    const wordsPerRound = getWordsPerRound();
+    const totalRounds = Math.ceil(sentence.length / wordsPerRound);
+    const played = Math.floor(cursor / wordsPerRound) + (matchesLeft === 0 && currentSlice.length ? 1 : 0);
+    const currentRound = Math.min(played || 1, totalRounds) || 0;
+
+    progressElSentence.textContent = `Vòng ${currentRound}/${totalRounds}`;
+  }
+
+  function getWordsPerRound() {
+    return parseInt(wordsPerRoundSelSentence.value, 10) || 5;
+  }
+
+  function setNotice(msg = "") {
+    noticeElSentence.textContent = msg;
+  }
+
+  /*******************************
+   * 4) VÒNG CHƠI
+   *******************************/
+  function buildOrderAndReset() {
+    order = shuffle([...Array(sentence.length).keys()]); // [0..N-1] xáo trộn
+    cursor = 0;
+    score = 0;
+    mistakes = 0;
+    selectedChinese = null;
+    selectedMean = null;
+    nextBtnSentence.disabled = true;
+    setNotice("");
+    renderRound();
+    updateStats();
+  }
+
+  function renderRound() {
+    chineseListSentence.innerHTML = "";
+    sentenceList.innerHTML = "";
+    selectedChinese = null;
+    selectedMean = null;
+    nextBtnSentence.disabled = true;
+
+    const wordsPerRound = getWordsPerRound();
+    if (cursor >= order.length) {
+      // Hết toàn bộ từ
+      currentSlice = [];
+      matchesLeft = 0;
+      setNotice("🎉 Bạn đã chơi hết tất cả các từ! Nhấn Restart để chơi lại.");
+      updateStats();
+      return;
+    }
+
+    // Lấy mảng index cho vòng hiện tại
+    currentSlice = order.slice(cursor, cursor + wordsPerRound);
+    matchesLeft = currentSlice.length;
+
+    // Tạo danh sách Chinese (xáo trộn trong phạm vi slice để vị trí đổi mỗi vòng)
+    const chineseIndices = shuffle(currentSlice);
+    for (const idx of chineseIndices) {
+      const li = document.createElement("li");
+      li.textContent = sentence[idx].chinese;
+      li.dataset.idx = String(idx); // dùng index để đối chiếu
+      li.addEventListener("click", () => onSelectChinese(li));
+      chineseListSentence.appendChild(li);
+    }
+
+    // Tạo danh sách pinyin (xáo trộn)
+    const meanIndices = shuffle(currentSlice);
+    for (const idx of meanIndices) {
+      const li = document.createElement("li");
+      li.textContent = sentence[idx].mean;
+      li.dataset.idx = String(idx);
+      li.addEventListener("click", () => onSelectMean(li));
+      sentenceList.appendChild(li);
+    }
+
+    setNotice(`Chọn cặp khớp nhau. Còn ${matchesLeft} cặp trong vòng này.`);
+    updateStats();
+  }
+
+  function onSelectChinese(li) {
+    if (li.classList.contains("disabled")) return;
+    if (selectedChinese) selectedChinese.classList.remove("selected");
+    selectedChinese = li;
+    li.classList.add("selected");
+    tryCheckMatch();
+  }
+
+  function onSelectMean(li) {
+    if (li.classList.contains("disabled")) return;
+    if (selectedMean) selectedMean.classList.remove("selected");
+    selectedMean = li;
+    li.classList.add("selected");
+    tryCheckMatch();
+  }
+
+  function tryCheckMatch() {
+    if (!selectedChinese || !selectedMean) return;
+
+    const idxA = selectedChinese.dataset.idx;
+    const idxB = selectedMean.dataset.idx;
+
+    if (idxA === idxB) {
+      // ĐÚNG
+      selectedChinese.classList.remove("selected");
+      selectedMean.classList.remove("selected");
+      selectedChinese.classList.add("correct", "disabled");
+      selectedMean.classList.add("correct", "disabled");
+
+      score++;
+      matchesLeft--;
+      setNotice(`✅ Đúng! Còn ${matchesLeft} cặp.`);
+
+      // reset selection
+      selectedChinese = null;
+      selectedMean = null;
+
+      if (matchesLeft === 0) {
+        // Vòng hoàn tất
+        nextBtnSentence.disabled = false;
+        setNotice("🎯 Hoàn thành vòng này! Nhấn Next Round để tiếp tục.");
+      }
+      updateStats();
+    } else {
+      // SAI
+      selectedChinese.classList.add("wrong");
+      selectedMean.classList.add("wrong");
+      mistakes++;
+      setNotice("❌ Sai rồi, thử lại nhé!");
+
+      // Bỏ highlight sai sau 500ms
+      const a = selectedChinese, b = selectedMean;
+      selectedChinese = null;
+      selectedMean = null;
+      setTimeout(() => {
+        a.classList.remove("selected", "wrong");
+        b.classList.remove("selected", "wrong");
+      }, 500);
+
+      updateStats();
+    }
+  }
+
+  function nextRound() {
+    // Nhảy con trỏ đến sau slice hiện tại
+    cursor += currentSlice.length;
+    renderRound();
+  }
+
+  /*******************************
+   * 5) SỰ KIỆN
+   *******************************/
+  restartBtnSentence.addEventListener("click", buildOrderAndReset);
+  nextBtnSentence.addEventListener("click", nextRound);
+
+  // Đổi số từ mỗi vòng → restart để tính lại tổng vòng & thứ tự
+  wordsPerRoundSelSentence.addEventListener("change", buildOrderAndReset);
+
+  /*******************************
+   * 6) KHỞI ĐỘNG
+   *******************************/
+  buildOrderAndReset();
+}
+
 // Option game
 
 const showVocabularyGame = document.getElementById("showVocabularyGame");
@@ -641,27 +844,39 @@ const isPronunciationGame = document.getElementById("isPronunciationGame");
 const showPinyiGame = document.getElementById("showPinyinGame");
 const isPinyiGame = document.getElementById("isPinyinGame");
 
+const showSentenceGame = document.getElementById("showSentenceGame");
+const isSentenceGame = document.getElementById("isSentenceGame");
+
 showVocabularyGame.onclick = function () {
   isVocabularyGame.style.display = "block";
-  isPinyiGame.style.display = "none";
   isPronunciationGame.style.display = "none";
+  isPinyiGame.style.display = "none";
+  isSentenceGame.style.display = "none";
   vocabularyGame();
 }
 
 showPronunciationGame.onclick = function () {
-  console.log("Check data");
   isVocabularyGame.style.display = "none";
   isPronunciationGame.style.display = "block";
   isPinyiGame.style.display = "none";
+  isSentenceGame.style.display = "none";
   pronunciatioGame();
 }
 
 showPinyiGame.onclick = function () {
-  console.log("Check data");
-  isPinyiGame.style.display = "block";
   isVocabularyGame.style.display = "none";
   isPronunciationGame.style.display = "none";
+  isPinyiGame.style.display = "block";
+  isSentenceGame.style.display = "none";
   pinyinGame();
+}
+
+showSentenceGame.onclick = function () {
+  isVocabularyGame.style.display = "none";
+  isPronunciationGame.style.display = "none";
+  isPinyiGame.style.display = "none";
+  isSentenceGame.style.display = "block";
+  sentenceGame();
 }
 
 
