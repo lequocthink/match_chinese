@@ -610,6 +610,10 @@ header {
   .text_mobile_25 {
     font-size: 25px;
   }
+
+  .select_option {
+    font-size: 20px;
+  }
 }
 
 /* tablet */
@@ -680,6 +684,10 @@ header {
 
   .text_mobile_25 {
     font-size: 25px;
+  }
+
+  .select_option {
+    font-size: 20px;
   }
 }
 
