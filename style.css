@@ -586,6 +586,12 @@ header {
 
   #wordsPerRoundV, #wordsPerRoundP, #wordsPerRoundPinyin {
     width: 70px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .button-8 {
+    margin-right: 10px;
   }
 
   .column {
@@ -651,6 +657,12 @@ header {
 
   #wordsPerRoundV, #wordsPerRoundP, #wordsPerRoundPinyin {
     width: 70px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .button-8 {
+    margin-right: 10px;
   }
 
   .column {
