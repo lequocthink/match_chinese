@@ -40,16 +40,16 @@
     <div class="app">
         <header class="topbar">
             <div id="toast"></div>
-    
+
             <h1 style="text-transform: uppercase;" class="loading-text">FNG Chinese</h1>
-    
-    
-    
+
+
+
             <!-- Popup -->
             <div id="vocabModal" class="modal">
                 <div class="modal-content"
                     style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
-                    <span class="close">&times;</span>
+                    <span class="close" id="closeVocabulary">&times;</span>
                     <h2>Tất cả từ vựng</h2>
                     <table border="1" width="100%">
                         <thead>
@@ -65,7 +65,7 @@
                     </table>
                 </div>
             </div>
-    
+
             <!-- word popup -->
             <div class="word" id="word">
                 <div class="word_content"
@@ -139,7 +139,7 @@
                                         Phát âm như phụ âm “m” trong tiếng Việt
                                     </td>
                                 </tr>
-    
+
                                 <!-- group 2 -->
                                 <tr>
                                     <td rowspan="4">
@@ -188,7 +188,7 @@
                                         Phát âm như “l” trong tiếng Việt
                                     </td>
                                 </tr>
-    
+
                                 <!-- group 3 -->
                                 <tr>
                                     <td rowspan="4">
@@ -201,7 +201,8 @@
                                         z
                                     </td>
                                     <td>
-                                        Phát âm như “ch” trong tiếng Việt, âm tắc sát không bật hơi,đầu lưỡi thẳng tiếp xúc
+                                        Phát âm như “ch” trong tiếng Việt, âm tắc sát không bật hơi,đầu lưỡi thẳng tiếp
+                                        xúc
                                         giữa hai hàm răng trên và dưới.
                                     </td>
                                 </tr>
@@ -238,7 +239,7 @@
                                         Phát âm như phụ âm “r” nhưng không rung lưỡi
                                     </td>
                                 </tr>
-    
+
                                 <!-- group 4 -->
                                 <tr>
                                     <td rowspan="3">
@@ -276,7 +277,7 @@
                                         Phát âm như “x” trong tiếng Việt, đầu lưỡi chạm vào chân răng hàm dưới
                                     </td>
                                 </tr>
-    
+
                                 <!-- group 5 -->
                                 <tr>
                                     <td rowspan="3">
@@ -311,10 +312,11 @@
                                         h
                                     </td>
                                     <td>
-                                        Phát âm như “h” trong tiếng Việt, sát ở cuống họng, giống như âm giữa “h” và “kh”.
+                                        Phát âm như “h” trong tiếng Việt, sát ở cuống họng, giống như âm giữa “h” và
+                                        “kh”.
                                     </td>
                                 </tr>
-    
+
                                 <!-- group 6 -->
                                 <tr>
                                     <td colspan="4">
@@ -360,10 +362,10 @@
                                     </td>
                                 </tr>
                             </tbody>
-    
+
                         </table>
                     </div>
-    
+
                     <!-- Vận mẫu -->
                     <div>
                         <h2>Vận mẫu (Nguyên âm)</h2>
@@ -450,7 +452,7 @@
                                         Đọc như “uy” tròn môi
                                     </td>
                                 </tr>
-    
+
                                 <!-- group 2 -->
                                 <tr>
                                     <td colspan="3">
@@ -602,7 +604,7 @@
                                         Đọc như “uy+en” => uyên
                                     </td>
                                 </tr>
-    
+
                                 <!-- group 3 -->
                                 <tr>
                                     <td colspan="3">
@@ -699,7 +701,7 @@
                                         Đọc như “i+ang”
                                     </td>
                                 </tr>
-    
+
                                 <!-- group 4 -->
                                 <tr>
                                     <td colspan="3">
@@ -873,15 +875,15 @@
                                         các biến thể của “ang”
                                     </td>
                                 </tr>
-    
+
                             </tbody>
-    
+
                         </table>
                     </div>
                 </div>
             </div>
-    
-    
+
+
             <!-- radical popup -->
             <div class="radical" id="radical">
                 <div class="radical_content"
@@ -903,14 +905,14 @@
                             </thead>
                             <tbody id="radicalTableBody">
                             </tbody>
-    
+
                         </table>
                     </div>
                 </div>
             </div>
-    
+
         </header>
-    
+
         <div class="main">
             <!-- Nút mở bảng từ vựng -->
             <div class="left_main">
@@ -935,7 +937,7 @@
                     <button id="showPinyinGame" class="button-54" style="margin-right: 10px;">Ôn pinyin</button>
                     <button id="showSentenceGame" class="button-54" style="margin-right: 10px;">Ôn giao tiếp</button>
                 </div>
-        
+
                 <div id="isVocabularyGame">
                     <div class="controls" style="margin-bottom: 10px;">
                         <label for="wordsPerRoundV">Số từ mỗi vòng:</label>
@@ -947,13 +949,13 @@
                         <button id="restartBtnV" class="button-8">Restart</button>
                         <button id="nextBtnV" disabled class="button-85">Next Round ▶</button>
                     </div>
-            
+
                     <section class="stats">
                         <div>Điểm: <strong id="scoreV">0</strong></div>
                         <div>Sai: <strong id="mistakesV">0</strong></div>
                         <div>Tiến độ: <strong id="progressV">Vòng 0/0</strong></div>
                     </section>
-            
+
                     <section class="game-container">
                         <div class="column">
                             <h2>Chinese</h2>
@@ -964,10 +966,10 @@
                             <ul id="meanListV"></ul>
                         </div>
                     </section>
-            
+
                     <p class="notice" id="noticeV"></p>
                 </div>
-            
+
                 <div id="isPronunciationGame">
                     <div class="controls" style="margin-bottom: 10px;">
                         <label for="wordsPerRoundP">Số từ mỗi vòng:</label>
@@ -979,13 +981,13 @@
                         <button id="restartBtnP" class="button-8">Restart</button>
                         <button id="nextBtnP" disabled class="button-85">Next Round ▶</button>
                     </div>
-            
+
                     <section class="stats">
                         <div>Điểm: <strong id="scoreP">0</strong></div>
                         <div>Sai: <strong id="mistakesP">0</strong></div>
                         <div>Tiến độ: <strong id="progressP">Vòng 0/0</strong></div>
                     </section>
-            
+
                     <section class="game-container">
                         <div class="column">
                             <h2>Chinese</h2>
@@ -996,10 +998,10 @@
                             <ul id="pronunciationList"></ul>
                         </div>
                     </section>
-            
+
                     <p class="notice" id="noticeP"></p>
                 </div>
-            
+
                 <div id="isPinyinGame">
                     <div class="controls" style="margin-bottom: 10px;">
                         <label for="wordsPerRoundPinyin">Số từ mỗi vòng:</label>
@@ -1011,13 +1013,13 @@
                         <button id="restartBtnPinyin" class="button-8">Restart</button>
                         <button id="nextBtnPinyin" disabled class="button-85">Next Round ▶</button>
                     </div>
-            
+
                     <section class="stats">
                         <div>Điểm: <strong id="scorePinyin">0</strong></div>
                         <div>Sai: <strong id="mistakesPinyin">0</strong></div>
                         <div>Tiến độ: <strong id="progressPinyin">Vòng 0/0</strong></div>
                     </section>
-            
+
                     <section class="game-container">
                         <div class="column">
                             <h2>Chinese</h2>
@@ -1028,7 +1030,7 @@
                             <ul id="pinyinList"></ul>
                         </div>
                     </section>
-            
+
                     <p class="notice" id="noticePinyin"></p>
                 </div>
 
@@ -1043,13 +1045,13 @@
                         <button id="restartBtnSentence" class="button-8">Restart</button>
                         <button id="nextBtnSentence" disabled class="button-85">Next Round ▶</button>
                     </div>
-            
+
                     <section class="stats">
                         <div>Điểm: <strong id="scoreSentence">0</strong></div>
                         <div>Sai: <strong id="mistakesSentence">0</strong></div>
                         <div>Tiến độ: <strong id="progressSentence">Vòng 0/0</strong></div>
                     </section>
-            
+
                     <section class="game-container">
                         <div class="column">
                             <h2>Chinese</h2>
@@ -1060,7 +1062,7 @@
                             <ul id="sentenceList"></ul>
                         </div>
                     </section>
-            
+
                     <p class="notice" id="noticeSentence"></p>
                 </div>
             </div>
