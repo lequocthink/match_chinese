@@ -965,16 +965,22 @@
                 </div>
             </div>
             <div class="right_main">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <h1 style="width: 240px; height: 40px; padding: 10px; border-radius: 40px; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
+                        Match Chinese
+                    </h1>
+                </div>
                 <div class="right_main_button">
-                    <button id="showVocabularyGame" class="button-54" style="margin-right: 10px;">Ôn từ vựng</button>
-                    <button id="showPronunciationGame" class="button-54" style="margin-right: 10px;">Ôn phát âm</button>
-                    <button id="showPinyinGame" class="button-54" style="margin-right: 10px;">Ôn pinyin</button>
-                    <button id="showSentenceGame" class="button-54" style="margin-right: 10px;">Ôn giao tiếp</button>
+                    <button id="showVocabularyGame" class="button-54" style="margin-right: 10px;">Từ vựng</button>
+                    <button id="showPronunciationGame" class="button-54" style="margin-right: 10px;">Phát âm</button>
+                    <button id="showPinyinGame" class="button-54" style="margin-right: 10px;">Pinyin</button>
+                    <button id="showSentenceGame" class="button-54" style="margin-right: 10px;">Giao tiếp</button>
+                    <button id="showSentenceGame" class="button-54" style="margin-right: 10px;">Tên người</button>
                 </div>
 
                 <div id="isVocabularyGame">
                     <div class="controls" style="margin-bottom: 10px;">
-                        <label for="wordsPerRoundV" class="text_mobile_25">Số từ mỗi vòng:</label>
+                        <label for="wordsPerRoundV" class="text_mobile_30">Số từ mỗi vòng:</label>
                         <select id="wordsPerRoundV" class="select_option">
                             <option value="5" selected>5</option>
                             <option value="10">10</option>
@@ -989,28 +995,28 @@
                     </div>
 
                     <section class="stats">
-                        <div class="text_mobile_25">Điểm: <strong id="scoreV">0</strong></div>
-                        <div class="text_mobile_25">Sai: <strong id="mistakesV">0</strong></div>
-                        <div class="text_mobile_25">Tiến độ: <strong id="progressV">Vòng 0/0</strong></div>
+                        <div class="text_mobile_30">Điểm: <strong id="scoreV">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesV">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressV">Vòng 0/0</strong></div>
                     </section>
 
                     <section class="game-container">
                         <div class="column">
                             <h2>Chinese</h2>
-                            <ul id="chineseListV" class="text_mobile_25"></ul>
+                            <ul id="chineseListV" class="text_mobile_30"></ul>
                         </div>
                         <div class="column">
                             <h2>Nghĩa</h2>
-                            <ul id="meanListV" class="text_mobile_25"></ul>
+                            <ul id="meanListV" class="text_mobile_30"></ul>
                         </div>
                     </section>
 
-                    <p class="notice text_mobile_25" id="noticeV"></p>
+                    <p class="notice text_mobile_30" id="noticeV"></p>
                 </div>
 
                 <div id="isPronunciationGame">
                     <div class="controls" style="margin-bottom: 10px;">
-                        <label for="wordsPerRoundP" class="text_mobile_25">Số từ mỗi vòng:</label>
+                        <label for="wordsPerRoundP" class="text_mobile_30">Số từ mỗi vòng:</label>
                         <select id="wordsPerRoundP" class="select_option">
                             <option value="5" selected>5</option>
                             <option value="10">10</option>
@@ -1025,28 +1031,28 @@
                     </div>
 
                     <section class="stats">
-                        <div class="text_mobile_25">Điểm: <strong id="scoreP">0</strong></div>
-                        <div class="text_mobile_25">Sai: <strong id="mistakesP">0</strong></div>
-                        <div class="text_mobile_25">Tiến độ: <strong id="progressP">Vòng 0/0</strong></div>
+                        <div class="text_mobile_30">Điểm: <strong id="scoreP">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesP">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressP">Vòng 0/0</strong></div>
                     </section>
 
                     <section class="game-container">
                         <div class="column">
                             <h2>Chinese</h2>
-                            <ul class="text_mobile_25" id="chineseListP"></ul>
+                            <ul class="text_mobile_30" id="chineseListP"></ul>
                         </div>
                         <div class="column">
                             <h2>Cách phát âm</h2>
-                            <ul class="text_mobile_25" id="pronunciationList"></ul>
+                            <ul class="text_mobile_30" id="pronunciationList"></ul>
                         </div>
                     </section>
 
-                    <p class="notice text_mobile_25" id="noticeP"></p>
+                    <p class="notice text_mobile_30" id="noticeP"></p>
                 </div>
 
                 <div id="isPinyinGame">
                     <div class="controls" style="margin-bottom: 10px;">
-                        <label for="wordsPerRoundPinyin" class="text_mobile_25">Số từ mỗi vòng:</label>
+                        <label for="wordsPerRoundPinyin" class="text_mobile_30">Số từ mỗi vòng:</label>
                         <select id="wordsPerRoundPinyin" class="select_option">
                             <option value="5" selected>5</option>
                             <option value="10">10</option>
@@ -1061,28 +1067,28 @@
                     </div>
 
                     <section class="stats">
-                        <div class="text_mobile_25">Điểm: <strong id="scorePinyin">0</strong></div>
-                        <div class="text_mobile_25">Sai: <strong id="mistakesPinyin">0</strong></div>
-                        <div class="text_mobile_25">Tiến độ: <strong id="progressPinyin">Vòng 0/0</strong></div>
+                        <div class="text_mobile_30">Điểm: <strong id="scorePinyin">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesPinyin">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressPinyin">Vòng 0/0</strong></div>
                     </section>
 
                     <section class="game-container">
                         <div class="column">
                             <h2>Chinese</h2>
-                            <ul class="text_mobile_25" id="chineseListPinyin"></ul>
+                            <ul class="text_mobile_30" id="chineseListPinyin"></ul>
                         </div>
                         <div class="column">
                             <h2>Pinyin</h2>
-                            <ul class="text_mobile_25" id="pinyinList"></ul>
+                            <ul class="text_mobile_30" id="pinyinList"></ul>
                         </div>
                     </section>
 
-                    <p class="notice text_mobile_25" id="noticePinyin"></p>
+                    <p class="notice text_mobile_30" id="noticePinyin"></p>
                 </div>
 
                 <div id="isSentenceGame">
                     <div class="controls" style="margin-bottom: 10px;">
-                        <label class="text_mobile_25" for="wordsPerRoundSentence">Số từ mỗi vòng:</label>
+                        <label class="text_mobile_30" for="wordsPerRoundSentence">Số từ mỗi vòng:</label>
                         <select id="wordsPerRoundSentence" class="select_option">
                             <option value="5" selected>5</option>
                             <option value="10">10</option>
@@ -1097,23 +1103,23 @@
                     </div>
 
                     <section class="stats">
-                        <div class="text_mobile_25">Điểm: <strong id="scoreSentence">0</strong></div>
-                        <div class="text_mobile_25">Sai: <strong id="mistakesSentence">0</strong></div>
-                        <div class="text_mobile_25">Tiến độ: <strong id="progressSentence">Vòng 0/0</strong></div>
+                        <div class="text_mobile_30">Điểm: <strong id="scoreSentence">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesSentence">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressSentence">Vòng 0/0</strong></div>
                     </section>
 
                     <section class="game-container">
                         <div class="column">
                             <h2>Chinese</h2>
-                            <ul id="chineseListSentence" class="text_mobile_25"></ul>
+                            <ul id="chineseListSentence" class="text_mobile_30"></ul>
                         </div>
                         <div class="column">
                             <h2>Câu</h2>
-                            <ul id="sentenceList" class="text_mobile_25"></ul>
+                            <ul id="sentenceList" class="text_mobile_30"></ul>
                         </div>
                     </section>
 
-                    <p class="notice text_mobile_25" id="noticeSentence"></p>
+                    <p class="notice text_mobile_30" id="noticeSentence"></p>
                 </div>
             </div>
         </div>
