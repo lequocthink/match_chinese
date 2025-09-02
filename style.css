@@ -202,11 +202,11 @@ li.wrong {
 
 
 
-.radical, .word {
+.radical, .word, .grammar {
   position: fixed;
   z-index: 10;
   width: 100%;
-  background-color: rgba(230, 229, 229, 0.9);
+  background-color: rgba(94, 94, 94, 0.9);
   top: 0;
   left: 0;
   height: 100%;
@@ -214,7 +214,7 @@ li.wrong {
   /* opacity: 10%; */
 }
 
-.radical_content, .word_content {
+.radical_content, .word_content, .grammar_content {
   position: relative;
   width: 80%;
   margin: auto;
@@ -227,7 +227,7 @@ li.wrong {
   overflow: auto;
 }
 
-#closeRadicalBtn, #closeWordBtn, #closeVocabulary {
+#closeRadicalBtn, #closeWordBtn, #closeVocabulary, #closeGrammarBtn {
   position: sticky;
   right: 10px;
   top: 10px;

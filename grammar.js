@@ -1,0 +1,5 @@
+const grammarList = [
+    // { name: "", mean: "", example1: "<br/> <br/>", example2: "<br/> <br/>", example3: "<br/> <br/>"},
+    { name: "Dạng A不A (câu hỏi Khẳng định - Phủ định)", mean: "Trong tiếng Trung, có một dạng ngữ pháp đặc trưng để hỏi Yes/No: [Chủ ngữ] + [A不A câu hỏi] + [Động từ + Tân ngữ]", example1: "王先生要不要喝咖啡？ <br/> (Wáng xiānsheng yào bù yào hē kāfēi?) <br/> Ông Vương có muốn uống cà phê không?", example2: "這是不是烏龍茶？ <br/> (Zhè shì bú shì Wūlóng chá?) <br/> Đây có phải là trà Ô Long không?", example3: "臺灣人喜歡不喜歡喝茶？ <br/> (Táiwān rén xǐhuān bù xǐhuān hē chá?) <br/> Người Đài Loan có thích uống trà hay không?"},
+    { name: "Câu hỏi với 嗎 (ma)", mean: "Dùng 嗎 (ma) để biến một câu trần thuật thành một câu hỏi Yes/No. Không thay đổi trật tự câu. Chỉ cần thêm 嗎 vào cuối. Trả lời thường là 是/不是 (đúng/không) hoặc lặp lại động từ chính.", example1: "你好嗎？<br/> (Nǐ hǎo ma?) <br/> Bạn có khỏe không?", example2: "你來接我們嗎？ <br/> (Nǐ lái jiē wǒmen ma?) <br/> Bạn đến đón chúng tôi à?", example3: "他是日本人嗎？ <br/> (Tā shì Rìběn rén ma?) <br/> Anh ấy là người Nhật phải không?"},
+];

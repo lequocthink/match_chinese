@@ -963,6 +963,34 @@ closeRadicalBtn.onclick = function () {
   radical.style.display = "none";
 }
 
+const grammar = document.getElementById("grammar");
+const showGrammarBtn = document.getElementById("showGrammarBtn");
+const closeGrammarBtn = document.getElementById("closeGrammarBtn");
+const grammarTableBody = document.getElementById("grammarTableBody");
+
+// giả sử phần này chạy ngay sau khi DOM sẵn sàng:
+grammarTableBody.addEventListener('click', onCopyCell);
+
+showGrammarBtn.onclick = function () {
+  grammarTableBody.innerHTML = ""; // clear bảng cũ
+  grammarList.forEach((word, index) => {
+    const row = `<tr>
+      <td>${index + 1}</td>
+      <td class="copy_word">${word.name}</td>
+      <td>${word.mean}</td>
+      <td>${word.example1}</td>
+      <td>${word.example2}</td>
+      <td>${word.example3}</td>
+    </tr>`;
+    grammarTableBody.innerHTML += row;
+  });
+  grammar.style.display = "block";
+}
+
+closeGrammarBtn.onclick = function () {
+  grammar.style.display = "none";
+}
+
 
 
 

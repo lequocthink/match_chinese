@@ -911,6 +911,33 @@
                 </div>
             </div>
 
+            <!-- popup grammar -->
+            <div class="grammar" id="grammar">
+                <div class="grammar_content"
+                    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                    <!-- Thanh mẫu -->
+                    <span class="close" id="closeGrammarBtn">&times;</span>
+                    <div>
+                        <h2>Ngữ pháp</h2>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên ngữ pháp</th>
+                                    <th>Cách sử dụng</th>
+                                    <th>Ví dụ 1</th>
+                                    <th>Ví dụ 2</th>
+                                    <th>Ví dụ 3</th>
+                                </tr>
+                            </thead>
+                            <tbody id="grammarTableBody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </header>
 
         <div class="main">
@@ -922,12 +949,19 @@
                     </button>
                 </div>
                 <div>
-                    <button id="showWordBtn" class="button-74" style="margin: 10px; width: 90%;">Thanh mẫu và vận
-                        mẫu</button>
+                    <button id="showWordBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Thanh mẫu và vận mẫu
+                    </button>
                 </div>
                 <div>
-                    <button id="showRadicalBtn" class="button-74" style="margin: 10px; width: 90%;">Danh sách các bộ
-                        thủ</button>
+                    <button id="showRadicalBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Danh sách các bộ thủ
+                    </button>
+                </div>
+                <div>
+                    <button id="showGrammarBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Danh sách ngữ pháp
+                    </button>
                 </div>
             </div>
             <div class="right_main">
@@ -1092,6 +1126,7 @@
     <script src="vocabulary.js"></script>
     <script src="radical.js"></script>
     <script src="sentence.js"></script>
+    <script src="grammar.js"></script>
     <script src="script.js"></script>
 </body>
 
