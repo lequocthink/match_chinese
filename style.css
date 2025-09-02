@@ -548,7 +548,7 @@ header {
   }
 
   .button-74 {
-    min-width: 120px;
+    width: 70% !important;
     padding: 0 25px;
   }
 
@@ -590,6 +590,19 @@ header {
 
   .column {
     width: 100%;
+  }
+
+  .button-54 {
+    width: 70%;
+    
+  }
+
+  .right_main_button {
+    align-items: center;
+  }
+
+  .text_mobile_25 {
+    font-size: 25px;
   }
 }
 
@@ -642,6 +655,10 @@ header {
 
   .column {
     width: 100%;
+  }
+
+  .button-54 {
+    width: 120px;
   }
 }
 
