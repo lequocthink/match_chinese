@@ -992,6 +992,34 @@ closeGrammarBtn.onclick = function () {
 }
 
 
+const personName = document.getElementById("personName");
+const showPersonNameBtn = document.getElementById("showPersonNameBtn");
+const closePersonNameBtn = document.getElementById("closePersonNameBtn");
+const personNameTableBody = document.getElementById("personNameTableBody");
+
+// giả sử phần này chạy ngay sau khi DOM sẵn sàng:
+personNameTableBody.addEventListener('click', onCopyCell);
+
+showPersonNameBtn.onclick = function () {
+  personNameTableBody.innerHTML = ""; // clear bảng cũ
+  personNameList.forEach((word, index) => {
+    const row = `<tr>
+      <td>${index + 1}</td>
+      <td class="copy_word">${word.chinese}</td>
+      <td>${word.mean}</td>
+      <td>${word.pronunciation}</td>
+      <td>${word.pinyin}</td>
+    </tr>`;
+    personNameTableBody.innerHTML += row;
+  });
+  personName.style.display = "block";
+}
+
+closePersonNameBtn.onclick = function () {
+  personName.style.display = "none";
+}
+
+
 
 
 

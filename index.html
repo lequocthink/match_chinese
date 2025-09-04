@@ -938,11 +938,40 @@
                 </div>
             </div>
 
+            <!-- popup person name -->
+            <div class="personName" id="personName">
+                <div class="person_name_content"
+                    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                    <!-- Thanh mẫu -->
+                    <span class="close" id="closePersonNameBtn">&times;</span>
+                    <div>
+                        <h2>Tên Người</h2>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Từ Vựng</th>
+                                    <th>Ý nghĩa</th>
+                                    <th>Cách đọc</th>
+                                    <th>Pinyin</th>
+                                </tr>
+                            </thead>
+                            <tbody id="personNameTableBody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </header>
 
         <div class="main">
             <!-- Nút mở bảng từ vựng -->
             <div class="left_main">
+                <h1 class="title_left">
+                    OPTION
+                </h1>
                 <div>
                     <button id="showVocabularyBtn" class="button-74" style="margin: 10px; width: 90%;">
                         Xem toàn bộ từ vựng
@@ -963,11 +992,16 @@
                         Danh sách ngữ pháp
                     </button>
                 </div>
+                <div>
+                    <button id="showPersonNameBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Danh sách tên người
+                    </button>
+                </div>
             </div>
             <div class="right_main">
                 <div style="width: 100%; display: flex; justify-content: center;">
-                    <h1 style="width: 240px; height: 40px; padding: 10px; border-radius: 40px; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-                        Match Chinese
+                    <h1 class="title_right">
+                        MATCH CHINESE
                     </h1>
                 </div>
                 <div class="right_main_button">
@@ -1133,6 +1167,7 @@
     <script src="radical.js"></script>
     <script src="sentence.js"></script>
     <script src="grammar.js"></script>
+    <script src="personName.js"></script>
     <script src="script.js"></script>
 </body>
 

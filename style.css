@@ -202,7 +202,7 @@ li.wrong {
 
 
 
-.radical, .word, .grammar {
+.radical, .word, .grammar, .personName {
   position: fixed;
   z-index: 10;
   width: 100%;
@@ -214,7 +214,7 @@ li.wrong {
   /* opacity: 10%; */
 }
 
-.radical_content, .word_content, .grammar_content {
+.radical_content, .word_content, .grammar_content, .person_name_content {
   position: relative;
   width: 80%;
   margin: auto;
@@ -227,7 +227,7 @@ li.wrong {
   overflow: auto;
 }
 
-#closeRadicalBtn, #closeWordBtn, #closeVocabulary, #closeGrammarBtn {
+#closeRadicalBtn, #closeWordBtn, #closeVocabulary, #closeGrammarBtn, #closePersonNameBtn {
   position: sticky;
   right: 10px;
   top: 10px;
@@ -312,6 +312,23 @@ header {
   margin-left: 20px;
   padding: 10px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.title_left {
+  line-height: 40px;
+  height: 40px; 
+  padding: 10px; 
+  margin: 5px; 
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.title_right {  
+  width: 100%; 
+  line-height: 40px;
+  height: 40px; 
+  padding: 10px; 
+  margin: 5px; 
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .right_main_button {
@@ -614,6 +631,14 @@ header {
   .select_option {
     font-size: 20px;
   }
+
+  .title_left {
+    margin: 5px 15px 15px 15px;
+  }
+
+  .title_right {
+    margin: 5px 15px 15px 15px;
+  }
 }
 
 /* tablet */
@@ -688,6 +713,14 @@ header {
 
   .select_option {
     font-size: 20px;
+  }
+
+  .title_left {
+    margin: 5px 15px 15px 15px;
+  }
+
+  .title_right {
+    margin: 5px 15px 15px 15px;
   }
 }
 
