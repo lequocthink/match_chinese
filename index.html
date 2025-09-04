@@ -1009,7 +1009,7 @@
                     <button id="showPronunciationGame" class="button-54" style="margin-right: 10px;">Phát âm</button>
                     <button id="showPinyinGame" class="button-54" style="margin-right: 10px;">Pinyin</button>
                     <button id="showSentenceGame" class="button-54" style="margin-right: 10px;">Giao tiếp</button>
-                    <button id="showSentenceGame" class="button-54" style="margin-right: 10px;">Tên người</button>
+                    <button id="showPersonNameGame" class="button-54" style="margin-right: 10px;">Tên người</button>
                 </div>
 
                 <div id="isVocabularyGame">
@@ -1154,6 +1154,43 @@
                     </section>
 
                     <p class="notice text_mobile_30" id="noticeSentence"></p>
+                </div>
+
+
+                <div id="isPersonNameGame">
+                    <div class="controls" style="margin-bottom: 10px; margin-top: 20px;">
+                        <label class="text_mobile_30" for="wordsPerRoundPersonName">Số từ mỗi vòng:</label>
+                        <select id="wordsPerRoundPersonName" class="select_option">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                        <button id="restartBtnPersonName" class="button-8">Restart</button>
+                    </div>
+
+                    <section class="stats">
+                        <div class="text_mobile_30">Điểm: <strong id="scorePersonName">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesPersonName">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressPersonName">Vòng 0/0</strong></div>
+                        <button id="nextBtnPersonName" disabled class="button-85">Next Round ▶</button>
+                    </section>
+
+                    <section class="game-container">
+                        <div class="column">
+                            <h2>Chinese</h2>
+                            <ul id="chineseListPersonName" class="text_mobile_30"></ul>
+                        </div>
+                        <div class="column">
+                            <h2>Tên</h2>
+                            <ul id="personNameList" class="text_mobile_30"></ul>
+                        </div>
+                    </section>
+
+                    <p class="notice text_mobile_30" id="noticePersonName"></p>
                 </div>
             </div>
         </div>

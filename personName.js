@@ -1,5 +1,5 @@
 
-const personNameList = [
+const personNameData = [
     //    { chinese: "", mean: "", pronunciation: "", pinyin: "" },
     { chinese: "開", mean: "mở; bật; mở ra", pronunciation: "khai", pinyin: "kāi" },
     { chinese: "文", mean: "chữ; văn tự; tiếng; ngôn ngữ", pronunciation: "quển", pinyin: "wén " },
