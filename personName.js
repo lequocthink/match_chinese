@@ -8,7 +8,7 @@ const personNameData = [
     { chinese: "阮", mean: "Họ Nguyễn", pronunciation: "Roản", pinyin: "ruǎn" },
     { chinese: "陳", mean: "Họ trần", pronunciation: "trấn", pinyin: "chén" },
     { chinese: "黎", mean: "Họ Lê", pronunciation: "lí", pinyin: "lí" },
-    { chinese: "范", mean: "Họ Phạm", pronunciation: "Phan", pinyin: "fàn" },
+    { chinese: "範", mean: "Họ Phạm", pronunciation: "Phan", pinyin: "fàn" },
     { chinese: "黃", mean: "Họ Hoàng", pronunciation: "Hoáng", pinyin: "huáng " },
     { chinese: "潘", mean: "Phan", pronunciation: "pan", pinyin: "pān" },
     { chinese: "明", mean: "Minh (làm rõ, sáng tỏ, hiểu biết)", pronunciation: "míng", pinyin: "míng" },
