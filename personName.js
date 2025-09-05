@@ -25,4 +25,11 @@ const personNameData = [
     { chinese: "蘭", mean: "Lan (Hoa lan)", pronunciation: "lán", pinyin: "lán" },
     { chinese: "盛", mean: "Thịnh (Hưng Thịnh)", pronunciation: "shèng", pinyin: "shèng" },
     { chinese: "黎國盛", mean: "Lê Quốc Thịnh", pronunciation: "Líguóshèng", pinyin: "Líguóshèng" },
+    { chinese: "張", mean: "Họ Trương (bày ra; trưng bày, khai trương)", pronunciation: "zhāng", pinyin: "zhāng" },
+    { chinese: "怡", mean: "Di (vui vẻ; sung sướng; vui mừng; hân hoan)", pronunciation: "yí", pinyin: "yí" },
+    { chinese: "君", mean: "Quân (vua; quân chủ; quân vương)", pronunciation: "jūn", pinyin: "jūn" },
+    { chinese: "張怡君", mean: "Trương Di Quân", pronunciation: "Zhāngyíjūn ", pinyin: "Zhāngyíjūn" },
+    { chinese: "安", mean: "An (an toàn; bình an; bình yên)", pronunciation: "ān", pinyin: "ān" },
+    { chinese: "同", mean: "Đồng (cùng; giống nhau; tương đồng; như nhau)", pronunciation: "tóng", pinyin: "tóng" },
+    { chinese: "馬安同", mean: "Mã An Đồng", pronunciation: "Mǎ ān tóng", pinyin: "Mǎ ān tóng" },
 ];
