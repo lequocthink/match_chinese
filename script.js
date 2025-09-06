@@ -1120,13 +1120,14 @@ const modal = document.getElementById("vocabModal");
 const btn = document.getElementById("showVocabularyBtn");
 const span = document.querySelector(".close");
 const vocabTableBody = document.getElementById("vocabTableBody");
+const searchInputVocabulary = document.getElementById("searchInputVocabulary");
 
 vocabTableBody.addEventListener('click', onCopyCell);
 
-// Khi click nút -> mở popup và render bảng
-btn.onclick = function () {
-  vocabTableBody.innerHTML = ""; // clear bảng cũ
-  vocabulary.forEach((word, index) => {
+// Hàm render bảng theo danh sách cho trước
+function renderVocabulary(list) {
+  vocabTableBody.innerHTML = "";
+  list.forEach((word, index) => {
     const row = `<tr>
       <td>${index + 1}</td>
       <td class="copy_word">${word.chinese}</td>
@@ -1136,21 +1137,37 @@ btn.onclick = function () {
     </tr>`;
     vocabTableBody.innerHTML += row;
   });
+}
+
+// Khi click nút -> mở popup và render tất cả
+btn.onclick = function () {
+  searchInputVocabulary.value = ""; // reset ô tìm kiếm
+  renderVocabulary(vocabulary);
   modal.style.display = "block";
 }
 
-// Khi click nút đóng -> tắt popup
+// Khi gõ tìm kiếm -> lọc dữ liệu
+searchInputVocabulary.addEventListener("input", function () {
+  const keyword = this.value.toLowerCase().trim();
+  const filtered = vocabulary.filter(word =>
+    word.chinese.includes(keyword) ||
+    word.mean.toLowerCase().includes(keyword) ||
+    word.pinyin.toLowerCase().includes(keyword) ||
+    word.pronunciation.toLowerCase().includes(keyword)
+  );
+  renderVocabulary(filtered);
+});
+
+// Đóng popup
 span.onclick = function () {
   modal.style.display = "none";
 }
 
-// Khi click ra ngoài popup -> cũng tắt
 window.onclick = function (event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
 }
-
 
 const word = document.getElementById("word");
 const showWordBtn = document.getElementById("showWordBtn");
@@ -1226,13 +1243,15 @@ const personName = document.getElementById("personName");
 const showPersonNameBtn = document.getElementById("showPersonNameBtn");
 const closePersonNameBtn = document.getElementById("closePersonNameBtn");
 const personNameTableBody = document.getElementById("personNameTableBody");
+const searchPersonName = document.getElementById("searchPersonName");
 
-// giả sử phần này chạy ngay sau khi DOM sẵn sàng:
+// Gắn sự kiện copy
 personNameTableBody.addEventListener('click', onCopyCell);
 
-showPersonNameBtn.onclick = function () {
-  personNameTableBody.innerHTML = ""; // clear bảng cũ
-  personNameData.forEach((word, index) => {
+// Hàm render bảng
+function renderPersonName(list) {
+  personNameTableBody.innerHTML = "";
+  list.forEach((word, index) => {
     const row = `<tr>
       <td>${index + 1}</td>
       <td class="copy_word">${word.chinese}</td>
@@ -1242,9 +1261,28 @@ showPersonNameBtn.onclick = function () {
     </tr>`;
     personNameTableBody.innerHTML += row;
   });
+}
+
+// Khi mở popup -> render toàn bộ
+showPersonNameBtn.onclick = function () {
+  searchPersonName.value = ""; // reset ô tìm kiếm
+  renderPersonName(personNameData);
   personName.style.display = "block";
 }
 
+// Khi gõ tìm kiếm -> lọc dữ liệu
+searchPersonName.addEventListener("input", function () {
+  const keyword = this.value.toLowerCase().trim();
+  const filtered = personNameData.filter(word =>
+    word.chinese.includes(keyword) ||
+    word.mean.toLowerCase().includes(keyword) ||
+    word.pinyin.toLowerCase().includes(keyword) ||
+    word.pronunciation.toLowerCase().includes(keyword)
+  );
+  renderPersonName(filtered);
+});
+
+// Đóng popup
 closePersonNameBtn.onclick = function () {
   personName.style.display = "none";
 }
