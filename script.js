@@ -121,6 +121,8 @@ function vocabularyGame() {
       const li = document.createElement("li");
       li.textContent = vocabulary[idx].chinese;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
+      li.classList.add("copy_word");
+      li.addEventListener("click", onCopyCell);
       li.addEventListener("click", () => onSelectChinese(li));
       chineseListV.appendChild(li);
     }
@@ -325,6 +327,8 @@ function pronunciatioGame() {
       const li = document.createElement("li");
       li.textContent = vocabulary[idx].chinese;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
+      li.classList.add("copy_word");
+      li.addEventListener("click", onCopyCell);
       li.addEventListener("click", () => onSelectChinese(li));
       chineseListP.appendChild(li);
     }
@@ -528,6 +532,8 @@ function pinyinGame() {
       const li = document.createElement("li");
       li.textContent = vocabulary[idx].chinese;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
+      li.classList.add("copy_word");
+      li.addEventListener("click", onCopyCell);
       li.addEventListener("click", () => onSelectChinese(li));
       chineseListPinyin.appendChild(li);
     }
@@ -731,6 +737,8 @@ function sentenceGame() {
       const li = document.createElement("li");
       li.textContent = sentence[idx].chinese;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
+      li.classList.add("copy_word");
+      li.addEventListener("click", onCopyCell);
       li.addEventListener("click", () => onSelectChinese(li));
       chineseListSentence.appendChild(li);
     }
@@ -934,6 +942,8 @@ function personNameGame() {
       const li = document.createElement("li");
       li.textContent = personNameData[idx].chinese;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
+      li.classList.add("copy_word");
+      li.addEventListener("click", onCopyCell);
       li.addEventListener("click", () => onSelectChinese(li));
       chineseListPersonName.appendChild(li);
     }

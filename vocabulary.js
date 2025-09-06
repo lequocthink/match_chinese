@@ -171,7 +171,7 @@ const vocabulary = [
     { chinese: "美", mean: "đẹp, mỹ lệ", pronunciation: "mẩy", pinyin: "měi" },
     { chinese: "國", mean: "quốc gia, đất nước", pronunciation: "gủa", pinyin: "guó" },
     { chinese: "美國", mean: "Nước mỹ", pronunciation: "mẩy gủa", pinyin: "Měiguó" },
-    { chinese: "對", mean: "về, với, đối với", pronunciation: "tuy", pinyin: "duì" },
+    { chinese: "對", mean: "về, với, đối với, đúng, chính xác", pronunciation: "tuy", pinyin: "duì" },
     { chinese: "起", mean: "dậy, đứng dậy", pronunciation: "chỉ", pinyin: "qǐ" },
     { chinese: "烏", mean: "con quạ", pronunciation: "u", pinyin: "wū" },
     { chinese: "龍", mean: "con rồng", pronunciation: "lóng", pinyin: "lóng" },
