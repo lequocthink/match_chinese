@@ -565,16 +565,19 @@ header {
 
 @media (max-width: 767px) {
   .app {
-    width: 90%;
+    width: 95%;
+    margin: 10px 0;
   }
 
   .button-74 {
-    width: 70% !important;
+    width: 90% !important;
     padding: 0 25px;
+    font-size: 50px;
+    line-height: 80px;
   }
 
   .loading-text {
-    font-size: 50px;
+    font-size: 80px;
   }
 
   .main {
@@ -605,7 +608,7 @@ header {
     gap: 10px;
   }
 
-  #wordsPerRoundV, #wordsPerRoundP, #wordsPerRoundPinyin, #wordsPerRoundPersonName {
+  #wordsPerRoundV, #wordsPerRoundP, #wordsPerRoundPinyin, #wordsPerRoundPersonName, #wordsPerRoundSentence {
     width: 70px;
     height: 40px;
     margin-right: 20px;
@@ -620,7 +623,8 @@ header {
   }
 
   .button-54 {
-    width: 70%;
+    width: 90%;
+    font-size: 40px;
     
   }
 
@@ -629,7 +633,7 @@ header {
   }
 
   .text_mobile_30 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .select_option {
@@ -638,10 +642,72 @@ header {
 
   .title_left {
     margin: 5px 15px 15px 15px;
+    font-size: 75px;
+    height: 75px;
+    line-height: 75px;
   }
 
   .title_right {
     margin: 5px 15px 15px 15px;
+    font-size: 75px;
+    height: 75px;
+    line-height: 75px;
+  }
+
+
+  .radical, .word, .grammar, .personName {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(94, 94, 94, 0.9);
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+    /* opacity: 10%; */
+  }
+
+  .grammar_content {
+    font-size: 25px;
+    width: 90%;
+    max-height: 90%;
+    margin: 20px auto;
+  }
+
+  .modal-content, .word_content, .radical_content, .person_name_content {
+    font-size: 25px;
+  }
+
+  .grammar_content table {
+    /* width: 1100px; */
+    table-layout: auto; 
+    width: auto;      
+    border-collapse: collapse;
+  }
+
+  .grammar_content td {
+    white-space: nowrap;  
+    word-wrap: break-word; 
+    /* max-width: 300px;  */
+
+  }
+
+   #closeGrammarBtn {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+
+  .button-85 {
+    font-size: 30px;
+  }
+
+  .button-8 {
+    font-size: 20px;
   }
 }
 
