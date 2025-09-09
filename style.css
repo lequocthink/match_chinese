@@ -362,6 +362,18 @@ header {
 @keyframes shimmer { to { background-position: 100% } }
 
 
+#searchInputVocabulary {
+  width:100%; 
+  padding:8px; 
+  margin-bottom:10px;
+}
+
+#searchPersonName {
+  width:90%; 
+  padding:8px; 
+  margin-bottom:10px;
+}
+
 /* custom */
 
 .select_option {
@@ -857,6 +869,21 @@ header {
 
   .button-8 {
     font-size: 20px;
+  }
+
+  #searchInputVocabulary {
+    /* width: 20px; */
+    height: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    width: 90%;
+  }
+
+  #searchPersonName {
+    height: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    width: 90%;
   }
 }
 
