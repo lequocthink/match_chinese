@@ -6,4 +6,5 @@ const grammarList = [
     { name: "Trả lời câu hỏi", mean: "Ta có thể trả lời câu hỏi đầy đủ hoặc ngắn gọn", example1: "你是王先生嗎 ?<br/> Khẳng định: 是 hoặc 是的<br/> Đầy đủ: 對, 我就是王先生 <br/> Phủ định: 不是 <br/> Đầy đủ: 不是，我不是王先生", example2: "他來不來臺灣? <br/>Khẳng định: 來 hoặc 他來 <br/> đầy đủ: 對，他要來臺灣 <br/> Phủ định: 他不來 <br /> đầy đủ: 不，他不來臺灣", example3: "他喜歡不喜歡喝茶？<br/> Khẳng định: 喜歡 hoặc 他喜歡 <br/> đầy đủ: 對，他很喜歡喝茶 <br /> phủ định: 他不喜歡 <br /> đầy đủ: 不，他不喜歡喝茶  " },
     { name: "很 (hěn) + tính từ (stative verb)", mean: "Nghĩa là rất", example1: "烏龍茶很好喝 。", example2: "他很喜歡日本人 。", example3: "我們很好 。" },
     { name: "trợ từ ngữ khí 呢 (ne)", mean: "thường dùng để tạo câu hỏi ngắn kiểu 'còn … thì sao?'. Chủ ngữ + 呢？ Mệnh đề + 呢？ S + v + O, S2 + 呢？", example1: "我要喝茶， 你呢？", example2: "他不喝咖啡， 陳小姐呢？", example3: "王先生是日本人，李先生呢？" },
+    { name: "👉 Đây là một ngữ pháp về phương vị từ và động từ trong tiếng Trung, thường gặp với các chữ: 上, 下, 裡, 外, 前, 後.", mean: "", example1: "<br/> <br/>", example2: "<br/> <br/>", example3: "<br/> <br/>"},
 ];
