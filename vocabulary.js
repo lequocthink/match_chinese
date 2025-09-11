@@ -195,7 +195,7 @@ const vocabulary = [
     { chinese: "老", mean: "già, cũ, cổ", pronunciation: "lǎo", pinyin: "lǎo" },
     { chinese: "師", mean: "thầy; thầy dạy; thầy giáo; sư phụ", pronunciation: "shī", pinyin: "shī" },
     { chinese: "老師", mean: "giáo viên", pronunciation: "lǎoshī", pinyin: "lǎoshī" },
-    { chinese: "中", mean: "chính giữ, trung tâm, Trung Quốc", pronunciation: "zhōng", pinyin: "zhōng" },
+    { chinese: "中", mean: "chính giữa, trung tâm, Trung Quốc", pronunciation: "zhōng", pinyin: "zhōng" },
     { chinese: "中文", mean: "Tiếng Trung", pronunciation: "zhōngwén", pinyin: "zhōngwén" },
     { chinese: "中國", mean: "Trung Quốc", pronunciation: "Zhōngguó", pinyin: "Zhōngguó" },
     { chinese: "學", mean: "học, học tập", pronunciation: "xué", pinyin: "xué" },
