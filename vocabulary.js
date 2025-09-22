@@ -422,7 +422,7 @@ const vocabulary = [
     { chinese: "一路順風", mean: "thuận buồm xuôi gió; thượng lộ bình an", pronunciation: "yīlù shùnfēng", pinyin: "yīlù shùnfēng" },
     { chinese: "你姓什麼", mean: "Họ của bạn là gì?", pronunciation: "Nǐ xìng shénme", pinyin: "Nǐ xìng shénme" },
     { chinese: "貴", mean: "đắt; mắc; quý; quý giá", pronunciation: "guì", pinyin: "guì" },
-    { chinese: "您貴姓", mean: "Họ của bạn là gì? (Trang trọng)", pronunciation: "", pinyin: "" },
+    { chinese: "您貴姓", mean: "Họ của bạn là gì? (Trang trọng)", pronunciation: "Nín guìxìng", pinyin: "Nín guìxìng" },
     { chinese: "請問你貴姓", mean: "Xin hỏi quý danh của bạn là gì", pronunciation: "Qǐngwèn nǐ guìxìng", pinyin: "Qǐngwèn nǐ guìxìng" },
     { chinese: "阮", mean: "Họ Nguyễn", pronunciation: "ruǎn", pinyin: "ruǎn" },
     { chinese: "我姓阮", mean: "Tôi họ Nguyễn", pronunciation: "Wǒ xìng ruǎn", pinyin: "Wǒ xìng ruǎn" },
