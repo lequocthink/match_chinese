@@ -1121,6 +1121,7 @@ const btn = document.getElementById("showVocabularyBtn");
 const span = document.querySelector(".close");
 const vocabTableBody = document.getElementById("vocabTableBody");
 const searchInputVocabulary = document.getElementById("searchInputVocabulary");
+const showVocabulary = document.getElementById("showVocabulary");
 
 vocabTableBody.addEventListener('click', onCopyCell);
 
@@ -1141,6 +1142,7 @@ function renderVocabulary(list) {
 
 // Khi click nút -> mở popup và render tất cả
 btn.onclick = function () {
+  showVocabulary.style.display = "none";
   searchInputVocabulary.value = ""; // reset ô tìm kiếm
   renderVocabulary(vocabulary);
   modal.style.display = "block";
@@ -1161,6 +1163,14 @@ searchInputVocabulary.addEventListener("input", function () {
 // Đóng popup
 span.onclick = function () {
   modal.style.display = "none";
+  showVocabulary.style.display = "block";
+}
+
+showVocabulary.onclick = function () {
+  showVocabulary.style.display = "none";
+  searchInputVocabulary.value = ""; // reset ô tìm kiếm
+  renderVocabulary(vocabulary);
+  modal.style.display = "block";
 }
 
 window.onclick = function (event) {
