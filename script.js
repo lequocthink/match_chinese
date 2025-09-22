@@ -1127,17 +1127,17 @@ vocabTableBody.addEventListener('click', onCopyCell);
 
 // Hàm render bảng theo danh sách cho trước
 function renderVocabulary(list) {
-  vocabTableBody.innerHTML = "";
-  list.forEach((word, index) => {
-    const row = `<tr>
+  const rows = list.map((word, index) => `
+    <tr>
       <td>${index + 1}</td>
       <td class="copy_word">${word.chinese}</td>
       <td>${word.mean}</td>
       <td>${word.pronunciation}</td>
       <td>${word.pinyin}</td>
-    </tr>`;
-    vocabTableBody.innerHTML += row;
-  });
+    </tr>
+  `).join(""); // nối thành 1 string duy nhất
+
+  vocabTableBody.innerHTML = rows; // gán 1 lần
 }
 
 // Khi click nút -> mở popup và render tất cả
