@@ -411,7 +411,6 @@ const vocabulary = [
     { chinese: "打", mean: "Đánh, gõ [hit, strike]", pronunciation: "dǎ", pinyin: "dǎ" },
     { chinese: "擾", mean: "Rối, quấy rầy [disturb, annoy]", pronunciation: "rǎo", pinyin: "rǎo" },
     { chinese: "打擾", mean: "phiền; làm phiền; quấy rầy", pronunciation: "dǎrǎo", pinyin: "dǎrǎo " },
-    { chinese: "你", mean: "Bạn [you]", pronunciation: "nǐ", pinyin: "nǐ" },
     { chinese: "了", mean: "Rồi [modal particle]", pronunciation: "le", pinyin: "le" },
     { chinese: "打擾你了", mean: "Xin lỗi đã làm phiền bạn", pronunciation: "Dǎrǎo nǐle", pinyin: "Dǎrǎo nǐle" },
     { chinese: "愉", mean: "Vui vẻ, vui lòng [happy, pleased]", pronunciation: "yú", pinyin: "yú" },
