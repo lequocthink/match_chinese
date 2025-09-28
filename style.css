@@ -363,7 +363,7 @@ header {
 
 
 #searchInputVocabulary {
-  width:100%; 
+  width:90%; 
   padding:8px; 
   margin-bottom:10px;
 }
@@ -384,6 +384,17 @@ header {
 
 .showVocabulary button {
   font-size: 50px;
+}
+
+.popup_header {
+  position: sticky;
+  right: 10px;
+  top: 0px;
+  width: 100%px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
 }
 
 /* custom */
@@ -795,6 +806,17 @@ header {
     font-size: 50px;
     line-height: 50px;
   }
+
+  .popup_header {
+    position: sticky;
+    right: 10px;
+    /* top: 10px; */
+    width: 100%px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+  }
 }
 
 /* tablet */
@@ -946,7 +968,6 @@ header {
   }
 
   #searchInputVocabulary {
-    /* width: 20px; */
     height: 50px;
     font-size: 50px;
     line-height: 50px;
@@ -969,6 +990,17 @@ header {
   .close {
     font-size: 50px;
     line-height: 50px;
+  }
+
+  .popup_header {
+    position: sticky;
+    right: 10px;
+    /* top: 10px; */
+    width: 100%px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
   }
 }
 
