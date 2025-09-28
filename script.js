@@ -1176,6 +1176,7 @@ showVocabulary.onclick = function () {
 window.onclick = function (event) {
   if (event.target === modal) {
     modal.style.display = "none";
+    showVocabulary.style.display = "block";
   }
 }
 
