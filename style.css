@@ -948,5 +948,16 @@ header {
     line-height: 50px;
     width: 90%;
   }
+
+  #closeRadicalBtn, #closeWordBtn, #closeVocabulary, #closeGrammarBtn, #closePersonNameBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .close {
+    font-size: 50px;
+    line-height: 50px;
+  }
 }
 
