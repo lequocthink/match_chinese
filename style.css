@@ -363,6 +363,7 @@ header {
 
 
 #searchInputVocabulary {
+  border: 2px solid black;
   width:90%; 
   padding:8px; 
   margin-bottom:10px;
