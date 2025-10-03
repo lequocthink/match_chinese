@@ -589,7 +589,7 @@ const vocabulary = [
     { chinese: "眼睛", mean: "Mắt [eye]", pronunciation: "yǎn jīng", pinyin: "yǎn jīng" },
     { chinese: "耳", mean: "Tai [ear]", pronunciation: "ěr", pinyin: "ěr" },
     { chinese: "朵", mean: "Lượng từ cho hoa, tai… [classifier for flowers, ears]", pronunciation: "duǒ", pinyin: "duǒ" },
-    { chinese: "耳朵", mean: "Tai [ear]", pronunciation: "ěr duo", pinyin: "ěr duo" },
+    { chinese: "耳朵", mean: "Lổ Tai [ear]", pronunciation: "ěr duo", pinyin: "ěr duo" },
     { chinese: "鼻", mean: "Mũi [nose]", pronunciation: "bí", pinyin: "bí" },
     { chinese: "鼻子", mean: "Cái mũi [nose]", pronunciation: "bí zi", pinyin: "bí zi" },
     { chinese: "舌", mean: "Lưỡi [tongue]", pronunciation: "shé", pinyin: "shé" },

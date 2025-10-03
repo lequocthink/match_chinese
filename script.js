@@ -35,6 +35,9 @@ function vocabularyGame() {
   const restartBtnV = document.getElementById("restartBtnV");
   const nextBtnV = document.getElementById("nextBtnV");
 
+  let activeVocabulary = vocabulary; // mặc định dùng toàn bộ
+  let limitWords = null; // số từ cuối muốn lấy (null = lấy hết)
+
   let score = 0;
   let mistakes = 0;
   let order = [];   // mảng index đã xáo trộn toàn bộ
@@ -63,7 +66,7 @@ function vocabularyGame() {
     mistakesElV.textContent = String(mistakes);
 
     const wordsPerRound = getWordsPerRound();
-    const totalRounds = Math.ceil(vocabulary.length / wordsPerRound);
+    const totalRounds = Math.ceil(activeVocabulary.length / wordsPerRound);
     const played = Math.floor(cursor / wordsPerRound) + (matchesLeft === 0 && currentSlice.length ? 1 : 0);
     const currentRound = Math.min(played || 1, totalRounds) || 0;
 
@@ -82,7 +85,16 @@ function vocabularyGame() {
    * 4) VÒNG CHƠI
    *******************************/
   function buildOrderAndReset() {
-    order = shuffle([...Array(vocabulary.length).keys()]); // [0..N-1] xáo trộn
+    // Xác định vocabulary đang chơi
+    if (limitWords && limitWords > 0 && limitWords < vocabulary.length) {
+      activeVocabulary = vocabulary.slice(-limitWords); // lấy N từ cuối
+    } else {
+      activeVocabulary = vocabulary;
+    }
+
+    // Xáo trộn index dựa trên activeVocabulary
+    order = shuffle([...Array(activeVocabulary.length).keys()]); 
+    // order = shuffle([...Array(vocabulary.length).keys()]); // [0..N-1] xáo trộn
     cursor = 0;
     score = 0;
     mistakes = 0;
@@ -119,7 +131,7 @@ function vocabularyGame() {
     const chineseIndices = shuffle(currentSlice);
     for (const idx of chineseIndices) {
       const li = document.createElement("li");
-      li.textContent = vocabulary[idx].chinese;
+      li.textContent = activeVocabulary[idx].chinese;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
       li.classList.add("copy_word");
       li.addEventListener("click", onCopyCell);
@@ -131,7 +143,7 @@ function vocabularyGame() {
     const meanIndices = shuffle(currentSlice);
     for (const idx of meanIndices) {
       const li = document.createElement("li");
-      li.textContent = vocabulary[idx].mean;
+      li.textContent = activeVocabulary[idx].mean;
       li.dataset.idx = String(idx);
       li.addEventListener("click", () => onSelectMean(li));
       meanListV.appendChild(li);
@@ -223,6 +235,16 @@ function vocabularyGame() {
    * 6) KHỞI ĐỘNG
    *******************************/
   buildOrderAndReset();
+
+  document.getElementById("applyLimitBtnV").addEventListener("click", () => {
+    const val = parseInt(document.getElementById("limitWordsV").value, 10);
+    if (!isNaN(val) && val > 0) {
+      limitWords = val;
+    } else {
+      limitWords = null; // reset về tất cả
+    }
+    buildOrderAndReset();
+  });
 }
 
 

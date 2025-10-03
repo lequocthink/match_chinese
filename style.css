@@ -369,6 +369,29 @@ header {
   margin-bottom:10px;
 }
 
+.limitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#limitWordsV {
+  width: 100px;
+  height: 20px;
+  margin: 0 20px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+#applyLimitBtnV {
+  margin: 0;
+  height: 34px;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 10px;
+}
+
 #searchPersonName {
   width:90%; 
   padding:8px; 
@@ -818,6 +841,29 @@ header {
     border-radius: 20px;
     background-color: white;
   }
+
+  .limitbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  #limitWordsV {
+    width: 100px;
+    height: 32px;
+    margin: 0 20px;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  #applyLimitBtnV {
+    margin: 0;
+    height: 46px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+  }
 }
 
 /* tablet */
@@ -1002,6 +1048,29 @@ header {
     border: 1px solid black;
     border-radius: 20px;
     background-color: white;
+  }
+
+  .limitbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  #limitWordsV {
+    width: 100px;
+    height: 32px;
+    margin: 0 20px;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  #applyLimitBtnV {
+    margin: 0;
+    height: 46px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
   }
 }
 
