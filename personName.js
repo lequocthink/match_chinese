@@ -36,4 +36,6 @@ const personNameData = [
     { chinese: "中", mean: "Ở giữa, trung [middle, center]", pronunciation: "zhōng", pinyin: "zhōng" },
     { chinese: "誠", mean: "Thành thật, chân thành [honest, sincere]", pronunciation: "chéng", pinyin: "chéng" },
     { chinese: "田中誠一", mean: "điền trung thành nhất", pronunciation: "Tián Zhōng Chéng Yī", pinyin: "Tián Zhōng Chéng Yī" },
+    { chinese: "如", mean: "Như, giống như", pronunciation: "rú", pinyin: "rú" },
+    { chinese: "白如玉", mean: "Bạch Như Ngọc; tên riêng", pronunciation: "bái rú yù", pinyin: "bái rú yù" },
 ];
