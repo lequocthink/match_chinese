@@ -618,6 +618,7 @@ const vocabulary = [
     { chinese: "養", mean: "Nuôi dưỡng [to raise; to foster]", pronunciation: "yǎng", pinyin: "yǎng" },
     { chinese: "養母", mean: "Mẹ nuôi [adoptive mother]", pronunciation: "yǎngmǔ", pinyin: "yǎngmǔ" },
     { chinese: "父", mean: "Cha, bố [father]", pronunciation: "fù", pinyin: "fù" },
+    { chinese: "伯父", mean: "Bác trai (anh trai của cha) [elder paternal uncle]", pronunciation: "bófù", pinyin: "bófù" },
     { chinese: "父親", mean: "Cha (trang trọng, văn viết) [father]", pronunciation: "fùqīn", pinyin: "fùqīn" },
     { chinese: "生父", mean: "Cha ruột [biological father]", pronunciation: "shēngfù", pinyin: "shēngfù" },
     { chinese: "養父", mean: "Cha nuôi [adoptive father]", pronunciation: "yǎngfù", pinyin: "yǎngfù" },
