@@ -1074,3 +1074,18 @@ header {
   }
 }
 
+/* Tablet lớn (1024px → 1279px) */
+@media only screen and (min-width: 64em) and (max-width: 79.9375em) {
+  .button-74 {
+    font-size: 16px;
+  }
+
+  .button-54 {
+    font-size: 14px;
+  }
+
+  .app {
+    width: 95%;
+  }
+}
+
