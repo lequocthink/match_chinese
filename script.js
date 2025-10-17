@@ -93,7 +93,7 @@ function vocabularyGame() {
     }
 
     // Xáo trộn index dựa trên activeVocabulary
-    order = shuffle([...Array(activeVocabulary.length).keys()]); 
+    order = shuffle([...Array(activeVocabulary.length).keys()]);
     // order = shuffle([...Array(vocabulary.length).keys()]); // [0..N-1] xáo trộn
     cursor = 0;
     score = 0;
@@ -1151,7 +1151,7 @@ vocabTableBody.addEventListener('click', onCopyCell);
 function renderVocabulary(list) {
   const rows = list.map((word, index) => `
     <tr>
-      <td>${index + 1}</td>
+      <td>${word.index}</td>
       <td class="copy_word">${word.chinese}</td>
       <td>${word.mean}</td>
       <td>${word.pronunciation}</td>
