@@ -1166,14 +1166,14 @@ function renderVocabulary(list) {
 btn.onclick = function () {
   showVocabulary.style.display = "none";
   searchInputVocabulary.value = ""; // reset ô tìm kiếm
-  renderVocabulary(vocabulary);
+  renderVocabulary(vocabularyList);
   modal.style.display = "block";
 }
 
 // Khi gõ tìm kiếm -> lọc dữ liệu
 searchInputVocabulary.addEventListener("input", function () {
   const keyword = this.value.toLowerCase().trim();
-  const filtered = vocabulary.filter(word =>
+  const filtered = vocabularyList.filter(word =>
     word.chinese.includes(keyword) ||
     word.mean.toLowerCase().includes(keyword) ||
     word.pinyin.toLowerCase().includes(keyword) ||
@@ -1191,7 +1191,7 @@ span.onclick = function () {
 showVocabulary.onclick = function () {
   showVocabulary.style.display = "none";
   searchInputVocabulary.value = ""; // reset ô tìm kiếm
-  renderVocabulary(vocabulary);
+  renderVocabulary(vocabularyList);
   modal.style.display = "block";
 }
 
