@@ -30,4 +30,11 @@ const grammarList = [
     { index: "28", name: "都", mean: "也 ye, 都 dou và 當 chang là trạng từ. Trạng từ bổ nghĩa cho động từ. Trạng từ luôn đứng trước động từ trong tiếng Trung. Phủ định là 不", example1: "<br/> <br/>", example2: "<br/> <br/>", example3: "<br/> <br/>"},
     { index: "29", name: "常", mean: "也 ye, 都 dou và 當 chang là trạng từ. Trạng từ bổ nghĩa cho động từ. Trạng từ luôn đứng trước động từ trong tiếng Trung. Phủ định là 不 hoặc 沒 đứng sau 常", example1: "<br/> <br/>", example2: "<br/> <br/>", example3: "<br/> <br/>"},
     { index: "30", name: "吧", mean: "吧 trợ từ ngữ khí đứng cuối câu đưa ra gợi ý từ người nói (Nhé)", example1: "我們去喝咖啡還是喝茶 ？<br/> 我們去喝咖啡吧 。 <br/>", example2: "今天晚上我們看什麼電影 ？ <br/> 我們去看臺灣電影吧 ！ <br/>", example3: "週末我們去打籃球， 好不好 ？<br/> 我不喜歡打籃球， 我們打綱球吧！ <br/>"},
+    { index: "31", name: "塊", mean: "Lượng từ dành cho tiền: số + lượng từ + N(danh từ)", example1: "五塊錢 <br/> <br/>", example2: "<br/> <br/>", example3: "<br/> <br/>"},
+    { index: "32", name: "杯", mean: "Lượng từ dành cho ly, cốc: số + lượng từ + N(danh từ)", example1: "一杯咖啡 <br/> <br/>", example2: "<br/> <br/>", example3: "<br/> <br/>"},
+    { index: "33", name: "支", mean: "Lượng từ dành cho điện thoại: số + lượng từ + N(danh từ)", example1: "十支手機 <br/> <br/>", example2: "<br/> <br/>", example3: "<br/> <br/>"},
+    { index: "34", name: "種", mean: "Lượng từ dành cho nhiều loại,...: số + lượng từ + N(danh từ)", example1: "一種水果 <br/> 三種語言 <br/> 這種問題", example2: "<br/> <br/>", example3: "<br/> <br/>"},
+    { index: "35", name: "這, 那, 哪", mean: "這, 那, 哪 + số (có thể không có) + lượng từ + danh từ", example1: "這兩杯熱咖啡一共多少錢 ? <br/> 那三支手機太舊了 <br/> 哪（－）種手機不貴？", example2: "<br/> <br/>", example3: "<br/> <br/>"},
+    { index: "36", name: "幫", mean: "幫 (giúp) ", example1: "請幫我微波包子 <br/> 請幫我買一杯咖啡 <br/> 請鷲我照相 ", example2: "他不幫我微波包子 <br/> 姐姐不幫弟弟買咖啡 <br/> 王先生不幫我照相", example3: "你幫不幫他買手機 ？ <br/> 他幫你照相嗎 ？ <br/> 誰能幫安同微波包子 ？"},
+
 ];
