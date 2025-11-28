@@ -6,6 +6,10 @@
     <title>FNG Chinese</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+        html {
+            /* Cho phép cuộn mượt mà cho toàn bộ trang */
+            scroll-behavior: smooth; 
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -53,6 +57,7 @@
                 <div class="modal-content"
                     style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
 
+                    <span id="topLineVocablary"></span>
                     <div class="popup_header">
                         <span class="close" id="closeVocabulary">&times;</span>
                         <h2>Tất cả từ vựng</h2>
@@ -60,6 +65,11 @@
                         <!-- ô tìm kiếm -->
                         <input type="text" id="searchInputVocabulary" placeholder="Tìm kiếm từ vựng...">
                     </div>
+                    <a href="#bottomLineVocablary" class="close" id="topVocabulary" >
+                        ⬇ 
+                    </a>
+                        <!-- <span class="close" id="closeVocabulary">&times;</span> -->
+
 
                     <table border="1" width="100%">
                         <thead>
@@ -73,6 +83,11 @@
                         </thead>
                         <tbody id="vocabTableBody"></tbody>
                     </table>
+                    <a href="#topLineVocablary" class="close" id="bottomVocabulary" >
+                        ⬇ 
+                    </a>
+                    <span id="bottomLineVocablary"></span>
+                    <!-- <button type="button" id="bottomVocablary" >My Button</button> -->
                 </div>
             </div>
 
