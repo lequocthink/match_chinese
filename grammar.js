@@ -36,5 +36,9 @@ const grammarList = [
     { index: "34", name: "種", mean: "Lượng từ dành cho nhiều loại,...: số + lượng từ + N(danh từ)", example1: "一種水果 <br/> 三種語言 <br/> 這種問題", example2: "<br/> <br/>", example3: "<br/> <br/>"},
     { index: "35", name: "這, 那, 哪", mean: "這, 那, 哪 + số (có thể không có) + lượng từ + danh từ", example1: "這兩杯熱咖啡一共多少錢 ? <br/> 那三支手機太舊了 <br/> 哪（－）種手機不貴？", example2: "<br/> <br/>", example3: "<br/> <br/>"},
     { index: "36", name: "幫", mean: "幫 (giúp) ", example1: "請幫我微波包子 <br/> 請幫我買一杯咖啡 <br/> 請鷲我照相 ", example2: "他不幫我微波包子 <br/> 姐姐不幫弟弟買咖啡 <br/> 王先生不幫我照相", example3: "你幫不幫他買手機 ？ <br/> 他幫你照相嗎 ？ <br/> 誰能幫安同微波包子 ？"},
+    { index: "", name: "的", mean: "Lượt bỏ sanh từ sau 的 khi nó đã được đề cập từ trước", example1: "A: 你要買新手機還是舊手機 ？<br/> B: 我要新的 ， 不要舊的  <br/> A: 新手機貴不貴 ？ <br/> B: 新的很貴 ", example2: "你的手機不是新的 。 <br/> 這杯咖啡不熱 ，我要熱的 <br/> 房子很貴，我不買大的", example3: "房子，你喜歡新的嗎 ？ <br/> 手機， 他買不買舊的 ？ <br/> 咖啡 ，你要熱的嗎 ？"},
+    { index: "", name: "太 面… 了 le overly", mean: "Quá ... rồi", example1: "太貴了 <br/> 太大了  <br/> 太熱了", example2: "<br/> <br/>", example3: "<br/> <br/>"},
+    { index: "", name: "能 néng capability", mean: "Có khả năng, có thể", example1: "新手機能上綱 <br/> 那支手機能照相 <br/>", example2: "我的手機不能上綱 <br/> 誰 的手機不能照相 <br/>", example3: "你的手機能不能照相 ？ <br/> 舊的能不能上綱 ？ <br/> 那支手機能不能上綱 ？"},
+    { index: "", name: "多 duo ••• and more", mean: "Dùng để diển tả ta làm hơn 1 việc gì đó: <br/> số + 多 + lượng từ + N (Danh từ)", example1: "二十多個人 <br/> 五萬多支手機 <br/>", example2: " 二十多個人 <br/> 一千多支手機 <br/> 五百多個包子 <br /> 三 萬四千多塊錢", example3: "五塊多（ 錢 ）<br/> 一塊多（ 錢 ） <br/>"},
 
 ];
