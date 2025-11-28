@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trắc nghiệm TOCFL</title>
+    <style>
+        html {
+            /* Cho phép cuộn mượt mà cho toàn bộ trang */
+            scroll-behavior: smooth; 
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .quiz-container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            max-width: 700px;
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+        .correct {
+            background-color: #c8e6c9; /* xanh lá nhạt */
+        }
+        .incorrect {
+            background-color: #ffcdd2; /* đỏ nhạt */
+        }
+        .answer-correct {
+            color: #2e7d32; /* xanh lá đậm */
+            font-weight: bold;
+        }
+        select {
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .box-shadow {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .return-button {
+            background-color: #6d706d; /* Green background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding around the text */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            font-size: 16px; /* Font size */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .return-button:hover {
+            background-color: #000000; /* Darker green on hover */
+        }
+
+        .return-button:active {
+            background-color: #000000; /* Even darker green on active (click) */
+            transform: translateY(1px); /* Slight downward shift on click */
+        }
+        .question {
+
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <a href="./index.html" id="top" class="return-button" style="text-decoration: none;">
+            Match Chinese
+        </a>
+        <h2 style="width: 100%; text-align: center; text-transform: uppercase;">Trắc nghiệm TOCFL</h2>
+        <label for="exam-select">Chọn đề thi:</label>
+        <select id="exam-select">
+            <option value="exam1">Đề 1</option>
+            <option value="exam2">Đề 2</option>
+        </select>
+        <div id="quiz"></div>
+        <button id="submit">Nộp</button>
+        <div id="result" class="result"></div>
+        <a href="#submit" style="background-color: white; position: fixed; width: 30px; height: 30px; border: 1px solid black; border-radius: 25px; top: 10px; right: 10px; font-size: 15px; text-align: center; line-height: 30px; text-decoration: none;">
+            ⬇ 
+        </a>
+        <a href="#top" id="bottom" style="background-color: white; position: fixed; width: 30px; height: 30px; border: 1px solid black; border-radius: 25px; bottom: 10px; right: 10px; font-size: 15px; text-align: center; line-height: 30px; text-decoration: none;">
+            ⬆
+        </a>
+    </div>
+
+
+    <script src="exams.js"></script>
+    <script>
+        
+
+        const examSelect = document.getElementById('exam-select');
+        const quizContainer = document.getElementById('quiz');
+        const resultContainer = document.getElementById('result');
+        const submitButton = document.getElementById('submit');
+
+        let currentQuiz = [];
+
+        // Hàm trộn mảng
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function loadQuiz(examKey) {
+            currentQuiz = JSON.parse(JSON.stringify(exams[examKey])); // copy để không thay đổi gốc
+            quizContainer.innerHTML = '';
+            resultContainer.textContent = '';
+
+            currentQuiz.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question');
+                questionDiv.classList.add('box-shadow');
+
+                const questionText = document.createElement('p');
+                questionText.textContent = `${index + 1}. ${q.question}`;
+                questionDiv.appendChild(questionText);
+
+                const optionsList = document.createElement('ul');
+                optionsList.classList.add('options');
+
+                // Random đáp án
+                shuffleArray(q.options);
+
+                q.options.forEach(option => {
+                    const li = document.createElement('li');
+                    const label = document.createElement('label');
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = `question${index}`;
+                    radio.value = option;
+                    label.appendChild(radio);
+                    label.appendChild(document.createTextNode(option));
+                    li.appendChild(label);
+                    optionsList.appendChild(li);
+                });
+
+                questionDiv.appendChild(optionsList);
+                quizContainer.appendChild(questionDiv);
+            });
+        }
+
+        examSelect.addEventListener('change', () => {
+            loadQuiz(examSelect.value);
+        });
+
+        submitButton.addEventListener('click', () => {
+            let score = 0;
+            currentQuiz.forEach((q, index) => {
+                const selected = document.querySelector(`input[name="question${index}"]:checked`);
+                const questionDiv = quizContainer.children[index];
+                questionDiv.classList.remove('correct', 'incorrect');
+
+                if (selected) {
+                    if (selected.value === q.answer) {
+                        score++;
+                        questionDiv.classList.add('correct');
+                    } else {
+                        questionDiv.classList.add('incorrect');
+                        const optionsLis = questionDiv.querySelectorAll('li');
+                        optionsLis.forEach(li => {
+                            if (li.textContent === q.answer) {
+                                li.classList.add('answer-correct');
+                            }
+                        });
+                    }
+                } else {
+                    const optionsLis = questionDiv.querySelectorAll('li');
+                    optionsLis.forEach(li => {
+                        if (li.textContent === q.answer) {
+                            li.classList.add('answer-correct');
+                        }
+                    });
+                }
+            });
+            resultContainer.textContent = `Bạn trả lời đúng ${score} / ${currentQuiz.length} câu.`;
+        });
+
+        // load đề mặc định
+        loadQuiz(examSelect.value);
+    </script>
+</body>
+</html>
