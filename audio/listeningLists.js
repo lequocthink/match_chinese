@@ -144,6 +144,36 @@ const listeningLists = [
                     { speaker: '安同', content: '好啊！謝謝妳。' },
                 ]
             },
+            {
+                title: 'Bài 6: 06-01',
+                src: 'audio/mp3/06-01.mp3',
+                text: [
+                    { speaker: '安同', content: '聽說怡君的學校很漂亮。' },
+                    { speaker: '如玉', content: '他們學校在哪裡？遠不遠？' },
+                    { speaker: '安同', content: '有一點遠。他們學校在花蓮的山上。' },
+                    { speaker: '如玉', content: '山上？那裡的風景一定很美。' },
+                    { speaker: '安同', content: '是的，他們學校前面有海，後面有山，那裡真是一個很漂亮的地方。' },
+                    { speaker: '如玉', content: '我想去看看。我們這個週末一起去吧！' },
+                    { speaker: '安同', content: '好啊！我現在要去學校附近的咖啡店買咖啡。妳呢？' },
+                    { speaker: '如玉', content: '我去樓下找朋友，我們要一起去上課。' },
+                ]
+            },
+            {
+                title: 'Bài 6: 06-03',
+                src: 'audio/mp3/06-03.mp3',
+                text: [
+                    { speaker: '怡君', content: '歡迎你們來。' },
+                    { speaker: '安同', content: '你們學校真遠！' },
+                    { speaker: '怡君', content: '是啊，不是很近，有一點不方便。' },
+                    { speaker: '如玉', content: '這裡的學生在哪裡買東西？' },
+                    { speaker: '怡君', content: '在學校外面。學校裡面沒有商店。' },
+                    { speaker: '安同', content: '吃飯呢？學校裡面有沒有餐廳？' },
+                    { speaker: '怡君', content: '有，餐廳在學生宿舍的一樓。' },
+                    { speaker: '安同', content: '前面這棟大樓很漂亮。' },
+                    { speaker: '怡君', content: '這是圖書館，旁邊的那棟大樓是教室，圖書館後面有游泳池。' },
+                ]
+            },
+            
             // {
             //     title: 'Bài 1: 01-01',
             //     src: 'audio/mp3/01-01.mp3',
