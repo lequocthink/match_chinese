@@ -1693,8 +1693,8 @@ const vocabulary = [
     // { index: "1685", chinese: "檸檬", mean: "Chanh / chanh vàng [quả chanh] [lemon]", pronunciation: "níng méng", pinyin: "níng méng" },
     // { index: "1686", chinese: "味", mean: "Vị [mùi vị / vị giác / hương vị] [taste / flavor / smell]", pronunciation: "wèi", pinyin: "wèi" },
     // { index: "1687", chinese: "味道", mean: "Mùi vị / hương vị / mùi [mùi vị / phong vị / cảm giác] [taste / flavor / smell]", pronunciation: "wèi dào", pinyin: "wèi dào" },
-    // { index: "1688", chinese: "泰", mean: "Thái [bình yên / to lớn / Thái (phiên âm)] [peaceful / great / Thai (phonetic)]", pronunciation: "tài", pinyin: "tài" },
-    // { index: "1689", chinese: "泰國", mean: "Thái Lan [tên quốc gia: Thái Lan] [Thailand]", pronunciation: "tài guó", pinyin: "tài guó" },
+    { index: "1688", chinese: "泰", mean: "Thái [bình yên / to lớn / Thái (phiên âm)] [peaceful / great / Thai (phonetic)]", pronunciation: "tài", pinyin: "tài" },
+    { index: "1689", chinese: "泰國", mean: "Thái Lan [tên quốc gia: Thái Lan] [Thailand]", pronunciation: "tài guó", pinyin: "tài guó" },
     // { index: "1690", chinese: "比超來", mean: "So với / So rồi vượt lên (cách nói không chuẩn) [so sánh rồi vượt qua] [compare and overtake (non-standard)]", pronunciation: "bǐ chāo lái", pinyin: "bǐ chāo lái" },
     // { index: "1691", chinese: "極了", mean: "Cực kỳ / vô cùng / rất [nhấn mạnh mức độ rất cao] [extremely / exceedingly / very]", pronunciation: "jí le", pinyin: "jí le" },
     // { index: "1692", chinese: "忘不了", mean: "Không thể quên / quên không được [nhớ mãi / không quên nổi] [unforgettable / cannot forget / be unable to forget]", pronunciation: "wàng bù liǎo", pinyin: "wàng bù liǎo" },
@@ -1819,9 +1819,9 @@ const vocabulary = [
     // { index: "1811", chinese: "躺", mean: "Thảng - nằm, nằm ngửa, nằm dài [lie, recline]", pronunciation: "tǎng", pinyin: "tǎng" },
     // { index: "1812", chinese: "昏", mean: "Hôn - tối, chạng vạng, mờ tối [dusk, dim]", pronunciation: "hūn", pinyin: "hūn" },
     // { index: "1813", chinese: "黃昏", mean: "Hoàng hôn - hoàng hôn, chạng vạng [dusk, twilight]", pronunciation: "huáng hūn", pinyin: "huáng hūn" },
-    // { index: "1814", chinese: "條", mean: "Điều - sợi, dải, thanh; điều khoản, điều lệ; lượng từ cho vật dài, tin tức [strip, line; clause; measure word]", pronunciation: "tiáo", pinyin: "tiáo" },
+    { index: "1814", chinese: "條", mean: "Điều - sợi, dải, thanh; điều khoản, điều lệ; lượng từ cho vật dài, tin tức [strip, line; clause; measure word]", pronunciation: "tiáo", pinyin: "tiáo" },
     { index: "1815", chinese: "薯", mean: "Thổ - khoai tây, củ [potato, tuber]", pronunciation: "shǔ", pinyin: "shǔ" },
-    // { index: "1816", chinese: "薯條", mean: "Thổ điều - khoai tây chiên [French fries, potato sticks]", pronunciation: "shǔ tiáo", pinyin: "shǔ tiáo" },
+    { index: "1816", chinese: "薯條", mean: "Thổ điều - khoai tây chiên [French fries, potato sticks]", pronunciation: "shǔ tiáo", pinyin: "shǔ tiáo" },
     // { index: "1817", chinese: "啤", mean: "Bì - bia (phiên âm) [beer]", pronunciation: "pí", pinyin: "pí" },
     // { index: "1818", chinese: "啤酒", mean: "Bì tửu - bia [beer]", pronunciation: "pí jiǔ", pinyin: "pí jiǔ" },
     // { index: "1819", chinese: "浪", mean: "Lãng - sóng; phóng túng, không gò bó [wave; unrestrained]", pronunciation: "làng", pinyin: "làng" },
@@ -2254,7 +2254,8 @@ const vocabulary = [
     { index: "2245", chinese: "吉他", mean: "Cát tha - đàn guitar [guitar]", pronunciation: "jí tā", pinyin: "jí tā" },
     { index: "2246", chinese: "彈", mean: "Đàn - chơi (nhạc cụ dây như piano, guitar), búng, đánh [play (a stringed instrument), pluck, strike]. Lưu ý: trong ngữ cảnh chơi nhạc cụ, pinyin đọc là dàn", pronunciation: "dàn / tán", pinyin: "dàn / tán" },
     { index: "2247", chinese: "彈鋼琴", mean: "Đàn cương cầm - chơi đàn piano [play piano]", pronunciation: "dàn gāng qín", pinyin: "dàn gāng qín" },
-
-
+    { index: "2248", chinese: "麵條", mean: "Diện điều - mì, sợi mì [noodles]", pronunciation: "miàn tiáo", pinyin: "miàn tiáo" },
+    { index: "2249", chinese: "餅", mean: "Bính - bánh, bánh nướng, bánh khô [cake, biscuit, pastry]", pronunciation: "bǐng", pinyin: "bǐng" },
+    { index: "2250", chinese: "餅乾", mean: "Bính can - bánh quy, bánh biscuit [cookie, biscuit]", pronunciation: "bǐng gān", pinyin: "bǐng gān" },
 
 ];
