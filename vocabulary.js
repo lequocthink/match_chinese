@@ -1421,7 +1421,7 @@ const vocabulary = [
     { index: "1413", chinese: "桌", mean: "Bàn / Cái bàn [table]", pronunciation: "zhuō", pinyin: "zhuō" },
     { index: "1414", chinese: "桌子", mean: "Cái bàn [table]", pronunciation: "zhuō zi", pinyin: "zhuō zi" },
     { index: "1415", chinese: "亂", mean: "Loạn / Bừa bộn / Lộn xộn [messy / chaotic]", pronunciation: "luàn", pinyin: "luàn" },
-    // { index: "1416", chinese: "法律", mean: "Luật pháp [law / legal system]", pronunciation: "fǎ lǜ", pinyin: "fǎ lǜ" },
+    { index: "1416", chinese: "法律", mean: "Luật pháp [law / legal system]", pronunciation: "fǎ lǜ", pinyin: "fǎ lǜ" },
     // { index: "1417", chinese: "夠 (+)", mean: "Đủ / Đầy đủ / Đủ rồi [enough]", pronunciation: "gòu", pinyin: "gòu" },
     // { index: "1418", chinese: "履", mean: "Bước / Đi / Thực hiện [to tread / to fulfill]", pronunciation: "lǚ", pinyin: "lǚ" },
     // { index: "1419", chinese: "表", mean: "Bảng / Biểu mẫu / Bề ngoài [form / chart / surface]", pronunciation: "biǎo", pinyin: "biǎo" },
