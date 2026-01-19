@@ -488,7 +488,7 @@ const vocabulary = [
     { index: "482", chinese: "這麼", mean: "như vậy, thế này [so; like this]", pronunciation: "zhème", pinyin: "zhème" },
     { index: "483", chinese: "想", mean: "nghĩ, nhớ [to think/ to miss]", pronunciation: "xiǎng", pinyin: "xiǎng" },
     { index: "484", chinese: "我也這麼想", mean: "tôi cũng nghĩ vậy [I think so too]", pronunciation: "wǒ yě zhème xiǎng", pinyin: "wǒ yě zhème xiǎng" },
-    { index: "485", chinese: "地", mean: "đất, địa phương [land; place]", pronunciation: "dì", pinyin: "dì" },
+    { index: "485", chinese: "地", mean: "đất, địa phương, sàn nhà [land; place]", pronunciation: "dì", pinyin: "dì" },
     { index: "486", chinese: "本地", mean: "bản địa, địa phương [local]", pronunciation: "běndì", pinyin: "běndì" },
     { index: "487", chinese: "本地人", mean: "người bản địa [local person]", pronunciation: "běndì rén", pinyin: "běndì rén" },
     { index: "488", chinese: "你是本地人嗎", mean: "bạn là người bản địa phải không? [Are you a local?]", pronunciation: "nǐ shì běndì rén ma", pinyin: "nǐ shì běndì rén ma" },
@@ -2257,5 +2257,22 @@ const vocabulary = [
     { index: "2248", chinese: "麵條", mean: "Diện điều - mì, sợi mì [noodles]", pronunciation: "miàn tiáo", pinyin: "miàn tiáo" },
     { index: "2249", chinese: "餅", mean: "Bính - bánh, bánh nướng, bánh khô [cake, biscuit, pastry]", pronunciation: "bǐng", pinyin: "bǐng" },
     { index: "2250", chinese: "餅乾", mean: "Bính can - bánh quy, bánh biscuit [cookie, biscuit]", pronunciation: "bǐng gān", pinyin: "bǐng gān" },
+    { index: "2251", chinese: "可樂", mean: "Khả lạc - nước ngọt cola [cola, soft drink]", pronunciation: "kě lè", pinyin: "kě lè" },
+    { index: "2252", chinese: "可口可樂", mean: "Khả khẩu khả lạc - Coca-Cola [Coca-Cola]", pronunciation: "kě kǒu kě lè", pinyin: "kě kǒu kě lè" },
+    { index: "2253", chinese: "戲", mean: "Hí - trò chơi, kịch, diễn xuất [game, play, drama]", pronunciation: "xì", pinyin: "xì" },
+    { index: "2254", chinese: "遊戲", mean: "Du hí - trò chơi, giải trí [game, play]", pronunciation: "yóu xì", pinyin: "yóu xì" },
+    { index: "2255", chinese: "電腦遊戲", mean: "Điện não du hí - trò chơi máy tính [computer game, video game]", pronunciation: "diàn nǎo yóu xì", pinyin: "diàn nǎo yóu xì" },
+    { index: "2256", chinese: "玩遊戲", mean: "Ngoạn du hí - chơi trò chơi [play games]", pronunciation: "wán yóu xì", pinyin: "wán yóu xì" },
+    { index: "2257", chinese: "巧", mean: "Xảo - khéo léo; dùng phiên âm [clever; transliteration]", pronunciation: "qiǎo", pinyin: "qiǎo" },
+    { index: "2258", chinese: "克", mean: "Khắc - gram; dùng phiên âm [gram; transliteration]", pronunciation: "kè", pinyin: "kè" },
+    { index: "2259", chinese: "巧克力", mean: "Xảo khắc lực - socola [chocolate]", pronunciation: "qiǎo kè lì", pinyin: "qiǎo kè lì" },
+    { index: "2260", chinese: "玩具", mean: "Ngoạn cụ - đồ chơi [toy]", pronunciation: "wán jù", pinyin: "wán jù" },
+    { index: "2261", chinese: "兔", mean: "Thố - thỏ [rabbit]", pronunciation: "tù", pinyin: "tù" },
+    { index: "2262", chinese: "兔子", mean: "Thố tử - con thỏ [rabbit, bunny]", pronunciation: "tù zi", pinyin: "tù zi" },
+    { index: "2263", chinese: "可愛", mean: "Khả ái - dễ thương, đáng yêu [cute, lovely, adorable]", pronunciation: "kě ài", pinyin: "kě ài" },
+    { index: "2264", chinese: "商場", mean: "Thương trường - trung tâm thương mại [shopping mall, shopping center]", pronunciation: "shāng chǎng", pinyin: "shāng chǎng" },
+    { index: "2265", chinese: "掃地", mean: "Tảo địa - quét nhà [sweep the floor]", pronunciation: "sǎo dì", pinyin: "sǎo dì" },
+
+    
 
 ];
